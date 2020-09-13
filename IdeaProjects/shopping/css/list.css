@@ -1,0 +1,153 @@
+.header .logo  a{
+    background: url("../images/logo2.png") no-repeat;
+}
+.header  .sk{
+    position: absolute;
+    left: 185px;
+    top: 40px;
+    height: 32px;
+    width: 80px;
+    border-left:1px solid #b1191a;
+}
+.header  .sk img{
+    padding:3px 0 3px 14px;
+}
+.nav{
+    overflow: hidden;
+}
+.nav .w .sk_list{
+    float: left;
+    width: 367px;
+    height: 100%;
+    line-height: 45px;
+}
+.nav .w .sk_list ul li{
+    float: left;
+}
+.nav .w .sk_list ul li a{
+    padding: 0 29px;
+    font-size:16px;
+    color:#000000;
+    font-family:bold;
+    font-weight:700;
+}
+.nav .w .sk_item{
+    float: left;
+    line-height: 48px;
+}
+.nav .w .sk_item ul li{
+    float: left;
+    color: #666666;
+}
+.nav .w .sk_item ul li a{
+    padding: 0 23px;
+    font-size: 14px;
+}
+.nav .w .sk_item ul li:last-child a::after{
+    content: '\ea10';
+    font-family: icomoon;
+    padding-left: 6px;
+}
+.main .hd{
+    height:120px;
+    width: 100%;
+    background-image: url("../upload/list_bd_2.png");
+    background-repeat: no-repeat;
+}
+.main .bd{
+    margin-top:25px;
+    width: 100%;
+}
+.main .bd ul li{
+    float: left;
+    width: 290px;
+    height: 460px;
+    border: 1px solid transparent;
+}
+.main .bd ul li:hover{
+    border: 1px solid #e60012;
+}
+.main .bd ul .picture{
+    height: 283px;
+    width: 100%;
+    text-align:center;
+    margin-bottom: 8px;
+}
+.main .bd ul li .text{
+    position: relative;
+    width: 288px;
+    height: 120px;
+    padding:0 12px 14px 12px;
+    font-size: 14px;
+    color:#e60012;
+}
+.main .bd ul li .text h4{
+    font-weight: 400;
+    font-size: 14px;
+    color:#666;
+    text-align: left;
+    margin-bottom: 14px;
+    line-height: 22px;
+}
+.main .bd ul li .text .price{
+    font-size: 22px;
+    line-height: 22px;
+}
+.main .bd ul li .text .original{
+    color:#a4a4a4;
+    line-height: 14px;
+    text-decoration: line-through;
+}
+.main .bd ul li .text .progress{
+    color:#666666;
+    line-height: 14px;
+}
+.main .bd ul li .text div{
+    position:absolute;
+    left: 72px;
+    top: 88px;
+    height: 12px;
+    width: 132px;
+    border: 1px solid #e60012;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.main .bd ul li .text div span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    height: 100%;
+    width: 87%;
+    background-color: #e60012;
+    padding: 0;
+    margin: 0;
+}
+.main .bd ul li .text  .rest{
+    color:#666666;
+}
+.main .bd ul li .text  .left{
+    margin-left: 140px;
+}
+
+.main .bd ul li .button{
+    height: 50px;
+    width: 100%;
+    background-color:#e60012;
+    text-align: center;
+    line-height: 50px;
+}
+.main .bd ul li .button a{
+    color: #ffffff;
+    font-size: 20px;
+    color: #ffffff;
+}
+.clearfix:before,
+.clearfix:after{
+    content: '';
+    display: table;
+}
+.clearfix:after{
+    clear: both;
+}
+

@@ -1,0 +1,110 @@
+.w{
+    width: 1200px;
+    margin: 0 auto;
+}
+.w .header{
+    height: 84px;
+    width: 100%;
+    border-bottom: 2px solid #b1191a;
+}
+.w .header img{
+    width: 172px;
+    height: 61px;
+    margin-top: 16px;
+}
+.w .registerarea{
+    height: 545px;
+    width: 100%;
+    margin-top: 20px;
+    border:1px solid #dfdfdf;
+}
+.w .registerarea .hd{
+    height: 41px;
+    width: 100%;
+    border-bottom:1px solid #dfdfdf;
+    background-color: #ececec;
+    line-height: 42px;
+    color: #333333;
+    font-size: 18px;
+    border-radius: 3px;
+}
+.w .registerarea .hd .new{
+    margin-left: 10px;
+    float: left;
+}
+.w .registerarea .hd .old{
+    float: right;
+    margin-right: 10px;
+    font-size: 14px;
+}
+.w .registerarea .hd .old a{
+    color:#c81623;
+}
+.w .registerarea .bd .form{
+    width: 650px;
+    margin: 54px auto 0;
+}
+.w .registerarea .bd .form ul li{
+    width: 100%;
+    height: 38px;
+    line-height: 38px;
+    margin-bottom: 20px;
+}
+.w .registerarea .bd .form ul li label{
+    display: inline-block;
+    width: 140px;
+    text-align: right;
+}
+.w .registerarea .bd .form ul li input{
+    height: 38px;
+    width: 242px;
+    border:1px solid #999999;
+    margin:0 10px;
+}
+.w .registerarea .bd .form ul li span .error,
+.success{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../images/error.png");
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.w .registerarea .bd .form ul li span .success{
+    background: url("../images/success.png");
+}
+.w .registerarea .bd .form p{
+    width: 100%;
+    text-align: center;
+    margin-top: 22px;
+    margin-bottom: 50px;
+    font-size: 12px;
+    color:#4d4d4d;
+}
+.w .registerarea .bd .form .button{
+    margin: 0;
+}
+.w .registerarea .bd .form p i{
+    display: inline-block;
+    height: 15px;
+    width: 16px;
+    margin-right: 12px;
+    background: url("../images/checked.png");
+    vertical-align: middle;
+}
+.w .registerarea .bd .form p a{
+    color: #1ba1e6;
+}
+.w .registerarea .bd .form p button{
+    width: 200px;
+    height: 34px;
+    font-fize: 14px;
+    color: #ffffff;
+    background-color: #c81623;
+}
+.footer .w .bot ul{
+    margin-top: 0px;
+}
+.footer .register{
+    padding-top: 25px;
+}

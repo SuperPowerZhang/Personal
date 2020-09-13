@@ -1,0 +1,333 @@
+.main{
+    height: 455px;
+    margin-left: 220px;
+    margin-top: 10px;
+}
+.main .pk{
+    position: relative;
+    width: 721px;
+    height: 455px;
+    float: left;
+    overflow: hidden;
+}
+.main .pk .lt,
+.gt{
+    display: none;
+    position: absolute;
+    left:10px;
+    top:50%;
+    width: 20px;
+    height: 20px;
+    background-color: #a4a4a4;
+    z-index: 100;
+}
+.main .pk .gt{
+    left: 691px;
+}
+.main .pk ol{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    padding: 0 20px;
+    height: 20px;
+    background-color: #a4a4a4;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+    border-radius:5px;
+    opacity: 0.7;
+}
+.main .pk ol .current{
+    background-color: red;
+}
+.main .pk ol li{
+    float: left;
+    width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    margin: 2px;
+    background-color: #fff;
+    opacity: 1;
+}
+.main .pk ul{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4000px;
+    z-index: -1;
+    /*padding-inline-start:0;
+    overflow:hidden;*/
+}
+.main .pk ul li{
+    width: 721px;
+    height: 455px;
+    float: left;
+}
+.main .pk ul li img{
+    width: 721px;
+    height: 455px;
+}
+.main .news{
+    float: right;
+    width: 250px;
+    height: 455px;
+}
+.main .news .text{
+    height: 374px;
+    width: 100%;
+    border: 1px solid #e4e4e4;
+}
+.main .news .text .news1{
+    height: 33px;
+    width: 100%;
+    border-bottom: 1px dotted #e4e4e4;
+    padding:12px 15px 6px 16px;
+}
+.main .news .text .news1 i{
+    font-size: 14px;
+    line-height: 14px;
+    color: #333333;
+}
+.main .news .text .news1 .more{
+    float: right;
+    font-size:12px ;
+    line-height: 12px;
+}
+.main .news .text .news2{
+    height: 132px;
+    width: 100%;
+    border-bottom: 1px solid #e4e4e4;
+}
+.main .news .text .news2 ul li{
+    padding: 6px 0 0 16px;
+    height: 24px;
+    line-height:24px;
+    /*溢出显示...    */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.main .news .text .news2 ul li i{
+    font-size: 12px;
+}
+.main .news .text .news2 .title{
+    font-weight: 700;
+}
+
+.main .news .text .news3{
+    width: 100%;
+    height:209px;
+}
+.main .news .text .news3 ul li{
+    float: left;
+    height: 70px;
+    width: 62px;
+    border-bottom: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4;
+    padding:14px 18px 7px 18px ;
+    text-align:center;
+}
+.main .news .text .news3 ul li:nth-child(4n){
+    border-right: 0px;
+}
+.main .news .text .news3 ul li .first {
+    display:inline-block;
+    height:30px;
+    width: 27px;
+    background: url(../images/icons.png) no-repeat -15px -17px ;
+}
+.main .news .text .news3 ul li .second {
+    display:inline-block;
+    height:30px;
+    width: 27px;
+    background: url(../images/icons.png) no-repeat -80px -17px;
+}
+.main .news .picture img{
+    margin-top:4px;
+}
+.recommand{
+    height: 163px;
+    margin-top: 11px;
+    background-color: #ebebeb;
+}
+.recommand .hd{
+    float: left;
+    height: 100%;
+    width: 206px;
+    background-color: #5c5251;
+}
+.recommand .hd .text{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 18px;
+}
+.recommand .hd .text i{
+    display:inline-block;
+    height: 58px;
+    width: 58px;
+    margin-top: 31px;
+    margin-bottom: 11px;
+    line-height: 58px;
+}
+.recommand .hd .text i::after{
+    content: '\e94e';
+    font-family: icomoon;
+    font-size: 58px;
+    margin-top: 31px;
+    margin-bottom: 11px;
+}
+.recommand .bd{
+    float: left;
+}
+.recommand .bd ul li{
+    width: 248.5px;
+    height: 143px;
+    float: left;
+    margin-top:10px ;
+    border-right: 1px solid  #dddddd;
+}
+.recommand .bd ul li .text{
+    float: left;
+    width: 114px;
+    height: 120px;
+    margin-top: 23px;
+    margin-left: 19px;
+    background-image: none;
+}
+.recommand .bd ul li .text h4{
+    font-size: 16px;
+    color: #333333;
+}
+.recommand .bd ul li .text p{
+    background-color: #00a0e8;
+    font-size: 14px;
+    color: #ffffff;
+}
+.recommand .bd ul li .text p1{
+    font-size: 12px;
+    color:#666666;
+}
+.recommand .bd ul li div{
+    float: left;
+    width: 82px;
+    height: 113px;
+    background-image: url(../upload/推荐1.png);
+    background-repeat:no-repeat ;
+}
+.floor   .hd{
+    height: 42px;
+    margin-top: 19px;
+    border-bottom: 2px solid #c81623;
+    line-height: 40px;
+}
+.floor  .hd h4{
+    float: left;
+    font-size: 18px;
+    color:#c81623;
+    font-weight: 400;
+}
+.floor .hd .tab_list{
+    float: right;
+    margin-right: 9px;
+}
+.floor  .hd .tab_list ul li{
+    float: left;
+    color: #666666;
+    height: 12px;
+    font-size: 12px;
+}
+.floor  .hd .tab_list ul li:nth-child(even){
+    width: 1px;
+    height: 12px;
+    background-color: #666666;
+    margin: 12px 16px 10px 16px;
+}
+.floor  .bd .tab_content{
+    height: 360px;
+    margin-bottom: 20px;
+}
+.floor  .bd .brand{
+    height: 65px;
+    background-color: yellow;
+}
+.floor  .bd .tab_content .tab_list_item ul li{
+    float: left;
+    width: 220px;
+    height: 360px;
+}
+.floor  .bd .tab_content .tab_list_item ul .first{
+    width: 210px;
+    background-color: #f9f9f9;
+}
+.floor  .bd .tab_content .tab_list_item ul .first .text{
+    height: 100px;
+    width: 100%;
+    padding-left: 3px;
+}
+.floor  .bd .tab_content .tab_list_item ul .first .text ul li{
+    float: left;
+    width: 85px;
+    height: 34px;
+    margin-left: 12px;
+    border-bottom: 1px solid #ededed;
+    line-height: 34px;
+    font-size:12px;
+    color: #666666;
+    text-align: center;
+}
+.floor  .bd .tab_content .tab_list_item ul .first .picture{
+    width: 100%;
+    height: 260px;
+    text-align: center;
+    padding-top: 26px;
+}
+.floor   .bd .tab_content .tab_list_item ul .main{
+    float: left;
+    width: 330px;
+    height: 360px;
+    background-color: #aed6d8;
+    margin:0;
+    text-align: center;
+    padding-top: 38px;
+}
+.floor  .bd .tab_content .tab_list_item ul .main .picture{
+    height: 100%;
+    width: 100%;
+}
+.floor  .bd .tab_content .tab_list_item ul .third{
+    border-right: 1px solid #ededed;
+}
+.floor  .bd .tab_content .tab_list_item ul .third ul li{
+    height: 180px;
+    width: 100%;
+    border-bottom:1px solid #ededed;
+}
+.floor .bd .tab_content .tab_list_item ul .third ul li .text{
+    height: 94px;
+    width: 100%;
+    padding-top: 25px;
+    padding-left: 20px;
+}
+.floor   .bd .tab_content .tab_list_item ul .third ul li .text h4{
+    font-size:16px;
+    color:#000000;
+    font-weight:400;
+}
+.floor  .bd .tab_content .tab_list_item ul .third ul li .text p{
+    fongt-size:14px;
+    color:#e60012;
+}
+.floor   .bd .tab_content .tab_list_item ul .third ul li .picture{
+    margin-left: 81px;
+}
+.floor  .bd .tab_content .tab_list_item ul .fourth {
+    text-align: center;
+    padding-top: 72px;
+    border-right: 1px solid #ededed;
+}
+.floor  .bd .tab_content .tab_list_item ul .fifth{
+    padding-top: 24px;
+    padding-left: 17px;
+    border-bottom:1px solid #ededed;
+}
