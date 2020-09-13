@@ -7,6 +7,9 @@
 
 li {
     list-style: none;
+    font-size: 20px;
+    margin: 0 auto;
+
 }
 
 a {
@@ -147,9 +150,4 @@ section a {
 
 .work .body ul {
     padding-inline-start: 0;
-}
-
-.work .body ul li {
-    font-size: 20px;
-    margin-top: 10px;
 }
