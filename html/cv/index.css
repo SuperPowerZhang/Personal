@@ -7,9 +7,7 @@
 
 li {
     list-style: none;
-    font-size: 20px;
     margin: 0 auto;
-
 }
 
 a {
@@ -18,71 +16,67 @@ a {
 }
 
 body {
-    width: 1200px;
-    font-size: 20px;
+    width: 600px;
+    font-size: 12px;
+    box-sizing: border-box;
 }
 
 header {
-    background-color: #929AAD;
-    font-size: 20px;
+    background-color: #929aad;
     color: #fff;
-    width: 100%;
+    width: 600px;
     height: 40px;
     line-height: 40px;
 }
 
 header a {
-    font-size: 20px;
-
+    font-size: 12px;
 }
 
 header li {
     display: inline-block;
-    width: 33%;
+    width: 190px;
     text-align: center;
 }
 
-
 .intro {
     position: relative;
-    margin-top: 20px;
-    height: 300px;
-    width: 1200px;
+    margin-top: 10px;
+    height: 160px;
+    width: 580px;
 }
 
 .img {
     position: absolute;
     top: 0;
-    left: 25px;
+    left: 10px;
     display: inline-block;
-    width: 275px;
-    height: 300px;
+    width: 100px;
+    height: 160px;
 }
 
 .info {
     position: absolute;
     top: 0;
-    left: 300px;
+    left: 120px;
     display: inline-block;
-    width: 900px;
-    height: 300px;
-    margin-top: 50px;
+    height: 160px;
 }
 
 .info p {
-    margin-top: 20px;
-    font-size: 20px;
-    line-height: 30px;
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 20px;
 }
 
 .info .name {
-    font-size: 36px;
+    font-size: 20px;
     font-weight: 700;
 }
 
 .info .basic span {
     display: inline-block;
-    width: 200px;
+    width: 100px;
 }
 
 .info .job {
@@ -90,41 +84,49 @@ header li {
 }
 
 .info .selfintro {
-    color: rgba(0, 0, 0, 0.7)
+    color: rgba(0, 0, 0, 0.5);
+
 }
 
 .intro img {
-    width: 200px;
+    width: 100px;
+}
+
+section {
+    margin: 0 10px;
 }
 
 section .header {
-    height: 50px;
-    font-size: 24px;
+    height: 32px;
+    font-size: 16px;
     font-weight: 700;
-    line-height: 60px;
-    border-bottom: solid 2px #929AAD;
+    line-height: 40px;
+    border-bottom: solid 2px #929aad;
 }
 
 section .body p {
-    margin-top: 10px;
-    height: 30px;
+    line-height: 20px;
 }
 
 section .body span {
     display: inline-block;
-    padding-right: 100px;
+    padding-right: 30px;
 }
 
 section h4 {
-    font-size: 22px;
-    height: 32px;
-    line-height: 37px;
+    font-size: 14px;
+    height: 22px;
+    line-height: 25px;
+    font-weight: 400;
+
+}
+
+.program h4 {
+    font-weight: 700;
 }
 
 section a {
-    /* color: #A8AFC9; */
-    /* color: #CFD2DE; */
-    color: #929AAD;
+    color: #929aad;
 }
 
 .program p {
@@ -145,9 +147,5 @@ section a {
 
 .work .body h4 span {
     display: inline-block;
-    margin-right: 100px;
-}
-
-.work .body ul {
-    padding-inline-start: 0;
+    margin-right: 20px;
 }
