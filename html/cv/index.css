@@ -104,11 +104,13 @@ section .header {
 
 section .body p {
     line-height: 20px;
+    font-size: 12px;
 }
 
 section .body span {
     display: inline-block;
     padding-right: 30px;
+    font-size: 12px;
 }
 
 section h4 {
