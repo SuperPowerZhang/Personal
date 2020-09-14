@@ -107,6 +107,10 @@ section .body p {
     font-size: 12px;
 }
 
+.work .body p {
+    font-size: 12px;
+}
+
 section .body span {
     display: inline-block;
     padding-right: 30px;
