@@ -1,6 +1,5 @@
 * {
     padding: 0 auto;
-    margin: 0 auto;
 }
 
 li {
@@ -17,6 +16,8 @@ body {
     width: 600px;
     font-size: 12px;
     box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 header {
@@ -25,6 +26,7 @@ header {
     width: 600px;
     height: 40px;
     line-height: 40px;
+    display: flex;
 }
 
 header a {
@@ -32,8 +34,6 @@ header a {
 }
 
 header li {
-    display: inline-block;
-    width: 190px;
     text-align: center;
 }
 
@@ -42,29 +42,25 @@ header li {
     margin-top: 10px;
     height: 160px;
     width: 580px;
+    display: flex;
 }
 
 .img {
-    position: absolute;
-    top: 0;
-    left: 10px;
     display: inline-block;
     width: 100px;
     height: 160px;
 }
 
 .info {
-    position: absolute;
-    top: 0;
-    left: 120px;
     display: inline-block;
     height: 160px;
+    margin-left: 20px;
 }
 
 .info p {
     margin-top: 10px;
     font-size: 12px;
-    line-height: 20px;
+    line-height: 18px;
 }
 
 .info .name {
@@ -72,9 +68,12 @@ header li {
     font-weight: 700;
 }
 
-.info .basic span {
-    display: inline-block;
-    width: 100px;
+.info .basic {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    margin: 0;
+
 }
 
 .info .job {
@@ -95,61 +94,34 @@ section {
 }
 
 section .header {
-    height: 32px;
     font-size: 16px;
     font-weight: 700;
-    line-height: 40px;
     border-bottom: solid 2px #929aad;
 }
 
 section .body p {
-    line-height: 20px;
-    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
 }
 
-.work .body p {
-    font-size: 12px;
-}
+section .body p .web {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
 
-section .body span {
-    display: inline-block;
-    padding-right: 30px;
-    font-size: 12px;
 }
 
 section h4 {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
     font-size: 14px;
-    height: 22px;
-    line-height: 25px;
-    font-weight: 400;
-
-}
-
-.program h4 {
     font-weight: 700;
+    margin-top: 7px;
+    margin-bottom: 3px;
 }
 
 section a {
     color: #929aad;
-}
-
-.program p {
-    position: relative;
-}
-
-.program p .demo {
-    position: absolute;
-    right: 120px;
-    top: 0;
-}
-
-.program p .git {
-    position: absolute;
-    right: 60px;
-    top: 0;
-}
-
-.work .body h4 span {
-    display: inline-block;
-    margin-right: 20px;
 }
