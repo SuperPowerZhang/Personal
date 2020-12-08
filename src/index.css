@@ -1,9 +1,10 @@
 
 body {
     max-width: 210mm;
+    max-height: 297mm;
     font-size: 16px;
     line-height: 1.5;
-    padding:20px;
+    padding:20px 20px  0 20px;
     margin-left:auto;
     margin-right:auto;
  }
@@ -22,14 +23,14 @@ body  em{
 header {
     display:flex;
     flex-wrap:wrap ;
-  font-weight:600;
+    font-weight:600;
     justify-content:space-between;
-  border-bottom :2px solid rgb(69, 109, 109);
+   border-bottom :2px solid rgb(69, 109, 109);
   
 }
 header li{
   display:inline-block;
-  padding:12px;
+  padding:6px;
   text-align: center;
   
 }
@@ -46,7 +47,7 @@ header li a {
 
 .intro {
     display:flex;
-    margin-top: 12px;
+    margin-top: 5px;
     justify-content:flex-start;
 }
 @media(max-width: 500px){
@@ -61,7 +62,7 @@ header li a {
 .img {
     display:inline-block;
     width: 100px;
-    height: 160px;
+    height: 145px;
 }
 @media(max-width: 500px){
     .img {
@@ -106,7 +107,7 @@ header li a {
     width: 100px;
 }
 section{
-  margin-top:15px;
+  margin-top:5px;
 }
 
 section a{
@@ -114,7 +115,7 @@ section a{
 
 }
 section .header {
-    padding:10px;
+    padding-top:10px;
     font-size: 16px;
     font-weight: 600;
     color:rgb(69, 109, 109);
@@ -177,9 +178,7 @@ section a {
 .other  .body .content {
     margin-left: 10px;
 }
-.work{
-    page-break-before: always;
-}
+
 .work,.workskill,.other .body .content .description{
   font-size:14px;
 }
@@ -200,4 +199,14 @@ section a {
     display:flex;
     justify-content:space-between;
 
+}
+@media(min-width:500px){
+    .program .body ul .moveUp{
+      margin-top: -20px;
+    }
+}
+@media(max-width:500px){
+    .other{
+        padding-bottom: 20px;
+    }
 }
