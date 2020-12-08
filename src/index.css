@@ -1,6 +1,6 @@
 * {
     padding: 0;
-    margin: 0 auto;
+    margin: 0 ;
     box-sizing: border-box;
 }
 
@@ -22,20 +22,23 @@ body {
     font-size: 16px;
     line-height: 1.5;
     padding:12px;
+    margin-left:auto;
+    margin-right:auto;
  }
-body  a{
-  /* color:rgb(85, 55, 79); */
-}
-body   em{
-    color:rgb(176, 127, 146);
-  margin-left:6px;
-  margin-right:6px;
+
+body  em{
+  color:rgb(69, 109, 109);
+  margin-left:4px;
+  margin-right:4px;
   }
+
 header {
-    background-color: rgb(39, 26, 33);
-    color:rgb(220, 204, 155);
+    color:rgb(69, 109, 109);
     display:flex;
-  justify-content:space-between;
+  font-weight:600;
+    justify-content:space-between;
+  border-bottom :2px solid rgb(69, 109, 109);
+  
 }
 header li{
   display:inline-block;
@@ -46,6 +49,7 @@ header li{
 
 header li a {
     font-size: 14px;
+  color:rgb(0, 175, 212)
 }
 
 
@@ -59,10 +63,12 @@ header li a {
     display:inline-block;
     width: 100px;
     height: 160px;
+    
 }
 
 .info {
   flex:1;
+  margin-left:20px;
 }
 
 .info p {
@@ -71,101 +77,95 @@ header li a {
 
 .info .name {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .info .basic span {
     display: inline-block;
-    padding-right:20px;
+  padding-right:20px;
 }
 
 .info .job {
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .info .selfintro {
-    /*color: rgba(0, 0, 0, 0.5);*/
-
 }
 
 .intro img {
     width: 100px;
 }
-
-/* //下面为待更新样式 */
-section {
-    margin: 0 10px;
+section{
+  margin-top:15px;
 }
 
+section a{
+  color:rgb(1, 175, 210);
+
+}
 section .header {
-    height: 32px;
+    padding:10px;
     font-size: 16px;
-    font-weight: 700;
-    line-height: 40px;
-    border-bottom: solid 2px #929aad;
+    font-weight: 600;
+    color:rgb(69, 109, 109);
+    border-bottom: solid 1px rgb(69, 109, 109);
 }
+
+
+section .body ul li {
+  margin-top:5px;
+}
+
+section .body ul li  h4{
+  font-size:14px;
+  font-weight: 600;
+  
+}
+.edu .body ul li  h4{
+  
+  display:flex;
+  justify-content:space-between;
+  
+}
+.work .body ul li  h4{
+  
+  display:flex;
+  justify-content:space-between;
+  
+}
+
 section .body ul li .content {
     display: flex;
     justify-content: space-between;
 }
-section .body ul li .content div{
-    margin-top: 0;
-    align-items: center;
-}
-section .body ul li .content .description{
-    margin-left: 0;
-    height: 106px;
-    line-height: 35px;
-
-}
-.work .body p {
-    font-size: 16px;
-}
-
-section .body span {
+section .body ul li a {
     display: inline-block;
-    padding-right: 30px;
-    font-size: 16px;
+    padding: 10px;
 }
 
-section h4 {
-    font-size: 18px;
-    height: 22px;
-    line-height: 25px;
-    font-weight: 400;
 
-}
-
-.program h4 {
-    font-weight: 700;
+section .body ul li .content .description{
+margin-top:5px;
+  flex-grow:1;
 }
 
 section a {
-    color: rgb(25, 95, 38);
+    color: rgb(0, 175, 212);
 }
 
-.program p {
-    position: relative;
-}
-
-.program p .demo {
-    position: absolute;
-    right: 120px;
-    top: 0;
-}
 
 .program  img {
     width: 100px;
     height: 100px;
 }
-
-.program p .git {
-    position: absolute;
-    right: 60px;
-    top: 0;
+.work,.workskill,.other .body .content .description{
+  font-size:14px;
 }
+    .icon {
+       width: 1em; height: 1em;
+       vertical-align: -0.15em;
+       fill: currentColor;
+       overflow: hidden;
+      font-size:18px;
+    }
 
-.work .body h4 span {
-    display: inline-block;
-    margin-right: 20px;
-}
