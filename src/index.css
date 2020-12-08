@@ -1,55 +1,72 @@
+* {
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
 
+li {
+    list-style: none;
+    margin: 0 auto;
+}
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+ i ,em{
+   font-style:normal 
+ }
 body {
     max-width: 210mm;
     max-height:297mm;
     font-size: 16px;
-    box-sizing: border-box;
     line-height: 1.5;
+    padding:12px;
+ }
+body  a{
+  /* color:rgb(85, 55, 79); */
 }
-
+body   em{
+    color:rgb(176, 127, 146);
+  margin-left:6px;
+  margin-right:6px;
+  }
 header {
-    background-color: #929aad;
+    background-color: rgb(39, 26, 33);
+    color:rgb(220, 204, 155);
+    display:flex;
+  justify-content:space-between;
+}
+header li{
+  display:inline-block;
+  padding:12px;
+  text-align: center;
+  
 }
 
-header a {
-    font-size: 12px;
+header li a {
+    font-size: 14px;
 }
 
-header li {
-    display: inline-block;
-    width: 190px;
-    text-align: center;
-}
 
 .intro {
-    position: relative;
-    margin-top: 10px;
-    height: 160px;
-    width: 580px;
+    display:flex;
+    margin-top: 12px;
+    justify-content:flex-start;
 }
 
 .img {
-    position: absolute;
-    top: 0;
-    left: 10px;
-    display: inline-block;
+    display:inline-block;
     width: 100px;
     height: 160px;
 }
 
 .info {
-    position: absolute;
-    top: 0;
-    left: 120px;
-    display: inline-block;
-    height: 160px;
+  flex:1;
 }
 
 .info p {
-    margin-top: 10px;
-    font-size: 16px;
-    line-height: 20px;
+    margin-top: 6px;
 }
 
 .info .name {
@@ -59,7 +76,7 @@ header li {
 
 .info .basic span {
     display: inline-block;
-    width: 100px;
+    padding-right:20px;
 }
 
 .info .job {
@@ -75,6 +92,7 @@ header li {
     width: 100px;
 }
 
+//下面为待更新样式
 section {
     margin: 0 10px;
 }
