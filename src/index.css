@@ -1,6 +1,5 @@
 
 body {
-    border:1px solid red;
     max-width: 210mm;
     font-size: 16px;
     line-height: 1.5;
@@ -177,6 +176,9 @@ section a {
 
 .other  .body .content {
     margin-left: 10px;
+}
+.work{
+    page-break-before: always;
 }
 .work,.workskill,.other .body .content .description{
   font-size:14px;
