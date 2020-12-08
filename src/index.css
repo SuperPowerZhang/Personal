@@ -1,31 +1,19 @@
-* {
-    padding: 0;
-    margin: 0 ;
-    box-sizing: border-box;
-}
 
-li {
-    list-style: none;
-    margin: 0 auto;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
- i ,em{
-   font-style:normal 
- }
 body {
+    border:1px solid red;
     max-width: 210mm;
-    max-height:297mm;
     font-size: 16px;
     line-height: 1.5;
-    padding:12px;
+    padding:20px;
     margin-left:auto;
     margin-right:auto;
  }
-
+@media(max-width: 500px){
+    body {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
 body  em{
   color:rgb(69, 109, 109);
   margin-left:4px;
@@ -33,8 +21,8 @@ body  em{
   }
 
 header {
-    color:rgb(69, 109, 109);
     display:flex;
+    flex-wrap:wrap ;
   font-weight:600;
     justify-content:space-between;
   border-bottom :2px solid rgb(69, 109, 109);
@@ -46,10 +34,14 @@ header li{
   text-align: center;
   
 }
-
+@media(max-width: 500px){
+    header li{
+        padding:6px;
+    }
+}
 header li a {
     font-size: 14px;
-  color:rgb(0, 175, 212)
+    color:rgb(0, 175, 212)
 }
 
 
@@ -58,14 +50,26 @@ header li a {
     margin-top: 12px;
     justify-content:flex-start;
 }
-
+@media(max-width: 500px){
+    .intro {
+        flex-direction: column;
+        justify-content: center;
+    }
+    header li a {
+        font-size: 12px;
+    }
+}
 .img {
     display:inline-block;
     width: 100px;
     height: 160px;
-    
 }
-
+@media(max-width: 500px){
+    .img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 .info {
   flex:1;
   margin-left:20px;
@@ -79,17 +83,24 @@ header li a {
     font-size: 20px;
     font-weight: 600;
 }
+@media(max-width: 500px){
+    .info{
+        margin-left:10px;
+        margin-right:10px;
+
+    }
+    .info .name {
+        font-size: 18px;
+    }
+}
 
 .info .basic span {
     display: inline-block;
-  padding-right:20px;
+    padding-right:20px;
 }
 
 .info .job {
     font-weight: 600;
-}
-
-.info .selfintro {
 }
 
 .intro img {
@@ -111,7 +122,6 @@ section .header {
     border-bottom: solid 1px rgb(69, 109, 109);
 }
 
-
 section .body ul li {
   margin-top:5px;
 }
@@ -119,34 +129,36 @@ section .body ul li {
 section .body ul li  h4{
   font-size:14px;
   font-weight: 600;
-  
 }
-.edu .body ul li  h4{
-  
-  display:flex;
-  justify-content:space-between;
-  
-}
-.work .body ul li  h4{
-  
-  display:flex;
-  justify-content:space-between;
-  
-}
+@media(max-width: 500px){
+    section{
+        margin-top:6px;
+    }
+    section .header {
+        font-size: 14px;
+    }
 
-section .body ul li .content {
+}
+section .body ul li  {
     display: flex;
     justify-content: space-between;
+    flex-wrap:wrap ;
 }
 section .body ul li a {
     display: inline-block;
     padding: 10px;
 }
+@media(max-width: 500px){
+    section .body ul li a {
+        padding: 4px;
+    }
+}
 
+section .body ul li .content {
+    margin-top:5px;
+    flex-grow:1;
+    margin-left: 10px;
 
-section .body ul li .content .description{
-margin-top:5px;
-  flex-grow:1;
 }
 
 section a {
@@ -158,14 +170,32 @@ section a {
     width: 100px;
     height: 100px;
 }
+
+.workskill .body .content {
+      margin-left: 10px;
+  }
+
+.other  .body .content {
+    margin-left: 10px;
+}
 .work,.workskill,.other .body .content .description{
   font-size:14px;
 }
-    .icon {
+.icon {
        width: 1em; height: 1em;
        vertical-align: -0.15em;
        fill: currentColor;
        overflow: hidden;
       font-size:18px;
-    }
+}
+.edu .body   h4{
+    display:flex;
+    flex-wrap:wrap ;
 
+    justify-content:space-between;
+}
+.work .body ul li  h4{
+    display:flex;
+    justify-content:space-between;
+
+}

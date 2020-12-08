@@ -1,0 +1,40 @@
+Arguments: 
+  C:\Users\software\node.js\node.exe C:\Users\software\Yarn\bin\yarn.js init -y
+
+PATH: 
+  C:\Users\software\cmder\vendor\git-for-windows\mingw64\bin;C:\Users\software\cmder\vendor\git-for-windows\usr\bin;C:\Users\Administrator\bin;D:\code\program\Personal\node_modules\.bin;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0;C:\windows\System32\OpenSSH;C:\Users\software\node.js;C:\Users\software\Yarn\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32\Scripts;C:\Users\Administrator\AppData\Local\Programs\Python\Python36-32;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\WebStorm 2019.3.1\bin;C:\Users\Administrator\AppData\Roaming\npm;C:\Users\Administrator\AppData\Local\Yarn\bin
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  14.15.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received [Object: null prototype]
+      at validateString (internal/validators.js:124:11)
+      at Object.isAbsolute (path.js:353:5)
+      at module.exports.exports.default (C:\Users\software\Yarn\lib\cli.js:96946:16)
+      at C:\Users\software\Yarn\lib\cli.js:51144:63
+      at Generator.next (<anonymous>)
+      at step (C:\Users\software\Yarn\lib\cli.js:310:30)
+      at C:\Users\software\Yarn\lib\cli.js:321:13
+
+npm manifest: 
+  {
+    "devDependencies": {
+      "typescript": "^4.1.2",
+      "scripts": {
+        "build":"rm -rf dist && parcel build src/index.html --no-minify --public-url ./"
+      }
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

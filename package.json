@@ -1,5 +1,11 @@
 {
-  "devDependencies": {
-    "typescript": "^4.1.2"
-  }
+  "name": "Personal",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "build":"rm -rf dist && parcel build src/index.html --no-minify --public-url ./"
+  },
+  "repository": "git@github.com:SuperPowerZhang/Personal.git",
+  "author": "SuperPowerZhang <2285546178@qq.com>",
+  "license": "MIT"
 }
