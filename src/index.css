@@ -207,6 +207,6 @@ section a {
 }
 @media(max-width:500px){
     .other{
-        padding-bottom: 20px;
+        padding-bottom: 40px;
     }
 }
