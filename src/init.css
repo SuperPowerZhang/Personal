@@ -1,14 +1,1 @@
-* {
-    padding: 0;
-    margin: 0 auto;
-}
-
-li {
-    list-style: none;
-    margin: 0 auto;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
+/* 暂时都先放在index.css */
