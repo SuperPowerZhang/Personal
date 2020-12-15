@@ -126,6 +126,7 @@ section .header {
 
 section .body ul li {
   margin-top:10px;
+    display: flex;
 }
 
 section .body ul li  h4{
@@ -164,8 +165,8 @@ section .body ul li .content {
 }
 
 .program  img {
-    width: 110px;
-    height: 110px;
+    width: 100px;
+    height: 100px;
 }
 
 .workskill .body .content {
@@ -177,6 +178,11 @@ section .body ul li .content {
 }
 .body .content .description{
     margin-top: 5px;
+}
+@media (min-width: 500px) {
+    .body .content .description{
+        max-width: 615px;
+    }
 }
 .work{
     page-break-before:always;
@@ -206,3 +212,16 @@ section .body ul li .content {
     .other{
         padding-bottom: 40px;
     }
+section p{
+    font-size: 14px;
+}
+section .show{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section .show p{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
