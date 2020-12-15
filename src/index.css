@@ -11,13 +11,15 @@ body {
 @media(max-width: 500px){
     body {
         font-size: 14px;
-        padding: 10px;
+        padding: 12px;
     }
 }
 body  em{
-  color:rgb(69, 109, 109);
+  color:rgb(208, 181, 52);
   margin-left:4px;
   margin-right:4px;
+    font-weight: 600;
+    font-size: 14px;
   }
 
 header {
@@ -41,7 +43,7 @@ header li{
 }
 header li a {
     font-size: 14px;
-    color:rgb(0, 175, 212)
+    color:rgb(88, 132, 202)
 }
 
 
@@ -76,7 +78,7 @@ header li a {
 }
 
 .info p {
-    margin-top: 6px;
+    margin-top: 5px;
 }
 
 .info .name {
@@ -107,7 +109,7 @@ header li a {
     width: 100px;
 }
 section{
-  margin-top:5px;
+  margin-top:10px;
 }
 
 section a{
@@ -123,7 +125,7 @@ section .header {
 }
 
 section .body ul li {
-  margin-top:5px;
+  margin-top:10px;
 }
 
 section .body ul li  h4{
@@ -161,14 +163,9 @@ section .body ul li .content {
 
 }
 
-section a {
-    color: rgb(0, 175, 212);
-}
-
-
 .program  img {
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
 }
 
 .workskill .body .content {
@@ -178,9 +175,11 @@ section a {
 .other  .body .content {
     margin-left: 10px;
 }
-
-.work,.workskill,.other .body .content .description{
-  font-size:14px;
+.body .content .description{
+    margin-top: 5px;
+}
+.work{
+    page-break-before:always;
 }
 .icon {
        width: 1em; height: 1em;
@@ -192,7 +191,6 @@ section a {
 .edu .body   h4{
     display:flex;
     flex-wrap:wrap ;
-
     justify-content:space-between;
 }
 .work .body ul li  h4{
@@ -202,11 +200,9 @@ section a {
 }
 @media(min-width:500px){
     .program .body ul .moveUp{
-      margin-top: -20px;
+      margin-top: -5px;
     }
 }
-@media(max-width:500px){
     .other{
         padding-bottom: 40px;
     }
-}
