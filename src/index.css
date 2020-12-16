@@ -2,11 +2,12 @@
 body {
     max-width: 210mm;
     max-height: 297mm;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5;
     padding:20px 20px  0 20px;
     margin-left:auto;
     margin-right:auto;
+    border: 1px solid red;
  }
 @media(max-width: 500px){
     body {
@@ -109,7 +110,7 @@ header li a {
     width: 100px;
 }
 section{
-  margin-top:10px;
+  /*margin-top:10px;*/
 }
 
 section a{
@@ -125,7 +126,6 @@ section .header {
 }
 
 section .body ul li {
-  margin-top:10px;
     display: flex;
 }
 
@@ -206,7 +206,7 @@ section .body ul li .content {
 }
 @media(min-width:500px){
     .program .body ul .moveUp{
-      margin-top: -5px;
+      margin-top: -20px;
     }
 }
     .other{
