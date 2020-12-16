@@ -182,10 +182,11 @@ section .body ul li .content {
     .body .content .description{
         max-width: 615px;
     }
-      .skill .body .content .description{
+      
+}
+.skill .body .content .description{
     max-width: 750px;
     }
-}
 .work{
     page-break-before:always;
 }
