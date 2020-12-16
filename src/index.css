@@ -204,7 +204,6 @@ section .body ul li .content {
 .work .body ul li  h4{
     display:flex;
     justify-content:space-between;
-
 }
 @media(min-width:500px){
     .program .body ul .moveUp{
@@ -232,4 +231,10 @@ section .show p{
 section .show{
     display: block;
     }
+    .work .body .content h4{
+    flex-wrap: wrap ; 
+    }
+    .work .body .content .description p{
+    max-width:750px;
+     }
 }
