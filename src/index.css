@@ -182,7 +182,7 @@ section .body ul li .content {
     .body .content .description{
         max-width: 615px;
     }
-     .body .skill .content .description{
+      .skill .body .content .description{
     max-width: 750px;
     }
 }
