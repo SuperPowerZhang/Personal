@@ -185,6 +185,7 @@ section .body ul li .content {
     max-width: 750px;
     }
 .work{
+    margin-top:25px;
     page-break-before:always;
 }
 .icon {
