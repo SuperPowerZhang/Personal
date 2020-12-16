@@ -228,3 +228,8 @@ section .show p{
     flex-direction: row;
     justify-content: space-between;
 }
+@media(max-width: 500px){
+section .show{
+    display: block;
+    }
+}
