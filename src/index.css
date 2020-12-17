@@ -214,20 +214,25 @@ section .body ul li .content {
 section p{
     font-size: 14px;
 }
-section .show{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content:center;
-}
+    section .show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
 section .show p{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-@media(max-width: 500px){
-section .show{
-    display: block;
+
+@media(max-width: 500px) {
+    section .show {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
     .work .body .content h4{
     flex-wrap: wrap ; 
