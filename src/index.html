@@ -6,8 +6,8 @@
   <meta name="viewport"
     content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>个人简介</title>
-  <link rel="stylesheet" href="index.css" />
-  <link rel="stylesheet" href="init.css" />
+  <link rel="stylesheet" href="./index.css" />
+  <link rel="stylesheet" href="./init.css" />
 </head>
 
 <body>
@@ -16,24 +16,21 @@
     <li>
       <span>邮箱：</span><a href="mailto:SuperPowerZhang@163.com">SuperPowerZhang@163.com</a>
     </li>
-    <li>
-      <span>Github：</span><a target="_blank" href="https://github.com/SuperPowerZhang">SuperPowerZhang</a>
-    </li>
   </header>
   <section class="intro">
     <div class="img">
-      <img src="me.jpg" alt="证件照" />
+      <img src="./me.jpg" alt="证件照" />
     </div>
     <div class="info">
       <p class="name">张玉丽</p>
       <p class="basic">
-        <span>24岁</span>
+        <span>25岁</span>
         <span>上海</span>
         <span class="job">期望职位：前端开发工程师</span>
       </p>
       <p class="selfintro">
-        简介：携程机票<em>H5</em>和<em>小程序</em>前端开发，主要技术：<em>Vue</em><em>SSR</em><em>Taro</em><em>Node.js</em><em>ts</em>
-        主要对接业务：微组件需求、拉新活动、预订主流程
+        简介：携程机票<em>H5</em>和<em>小程序</em>前端开发；主要技术：<em>Vue</em><em>SSR</em><em>Taro</em><em>Node.js</em><em>ts</em>；
+        主要业务：无障碍、微前端、拉新项目、预订主流程、小程序技改
       </p>
     </div>
   </section>
@@ -46,11 +43,41 @@
             <h4>
               <span><svg class="icon" aria-hidden="true">
                   <use xlink:href="#icon-xuexiao"></use>
-                </svg> 2014.8-2018.6</span><span>华东理工大学</span>
-              <span>信息管理与信息系统 | 本科</span>
-              <span>英语 | 本科辅修</span>
+                </svg> 2014.8-2018.6</span><span>学士</span><span>华东理工大学</span>
+              <span>信息管理与信息系统（辅修英语）</span>
               <span>GPA：3.5/4.0</span>
             </h4>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="work">
+    <div class="header">工作经历</div>
+    <div class="body">
+      <ul>
+        <li>
+          <div class="content">
+            <h4><span><svg class="icon" aria-hidden="true">
+                  <use xlink:href="#icon-gongzuotai"></use>
+                </svg> 2020.6-2022.1</span>
+              <span>携程</span>
+              <span>机票前端开发</span>
+            </h4>
+            <div class="description">
+              <p><span>- 微前端项目和拉新活动主要负责人，打通从创建-分享-助力-回显数据整个流程</span></p>
+              <p><span>- 无障碍、<em>Taro</em>和<em>H5</em>机票预订主流程核心开发 </span></p>
+              <p><span>- 带实习同学工作学习，部门内部分享3次</span></p>
+            </div>
+            <h4><span><svg class="icon" aria-hidden="true">
+                  <use xlink:href="#icon-gongzuotai"></use>
+                </svg> 2018.7-2020.6</span>
+              <span>携程</span>
+              <span>度假流程运营</span>
+            </h4>
+            <div class="description">
+              <p><span>- 跟进系统需求收集，方案沟通，上线验收，后期维护的整体流程</span></p>
+            </div>
           </div>
         </li>
       </ul>
@@ -63,12 +90,35 @@
         <li>
           <div class="content">
             <h4><svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-huadian-xiangrikui"></use>
+              </svg> H5无障碍预订流程<span>2021.10-2021.12</span></h4>
+            <div class="description">
+              <p>- 从0到1搭建机票无障碍预订流程，推广无障碍开发思想</p>
+              <p>- 收益写不出来呀这里？</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="content">
+            <h4><svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-zhangdan"></use>
-              </svg>微前端组件</h4>
+              </svg>微前端组件<span>2021.7-2021.10</span></h4>
             <div class="description">
               <p>- 基于<em>微件化</em>和<em>SSR</em>部署的微前端应用</p>
-              <p>- 实现了微组件在不同团队不同技术栈开发的各页面接入的功能 </p>
-              <p>- 为每场活动接入节省了6pd</p>
+              <p>- 实现了微组件在不同团队不同技术栈开发的h5页面接入，为每场活动接入节省了6pd</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="content">
+            <h4><svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-zhangdan"></use>
+              </svg>拉新项目
+              <span>2021.4-2021.10</span>
+            </h4>
+            <div class="description">
+              <p>- 实现从创建-分享-助力-回显数据的拉新流程</p>
+              <p>- 支持13场拉新活动，为机票带来每场1w新客UV量</p>
             </div>
           </div>
         </li>
@@ -76,10 +126,9 @@
           <div class="content">
             <h4><svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-huadian-xiangrikui"></use>
-              </svg> H5预订主流程</h4>
+              </svg> H5预订主流程<span>2020.6-2022.1</span></h4>
             <div class="description">
               <p>- 支持保障<em>h5</em>需求正常迭代，delay 次数为 0，无线上故障</p>
-              <p>- 重点需求在多场拉新活动支持</p>
             </div>
           </div>
         </li>
@@ -87,43 +136,11 @@
           <div class="content">
             <h4><svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-face"></use>
-              </svg> 小程序Taro技改</h4>
+              </svg>小程序Taro技改<span>2021.2-2022.1</span></h4>
             <div class="description">
               <p>- <em>Taro</em>项目替代原生小程序实践</p>
-              <p>- xxx</p>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="work">
-    <div class="header">工作经历</div>
-    <div class="body">
-      <ul>
-        <li>
-          <div class="content">
-            <h4><span><svg class="icon" aria-hidden="true">
-                  <use xlink:href="#icon-gongzuotai"></use>
-                </svg> 2020.6-2021.8</span>
-              <span>携程旅行网络有限公司</span>
-              <span>机票前端开发</span>
-            </h4>
-            <div class="description">
-              <p><span>- 微前端项目和拉新活动主要负责人，打通从创建-分享-助力-回显数据整个流程</span></p>
-              <p><span>- <em>Taro</em>和<em>H5</em>预订主流程需求支持 </span></p>
-              <p><span>- 带实习同学工作学习，部门内部分享2次，负责团队建设事项</span></p>
-            </div>
-            <h4><span><svg class="icon" aria-hidden="true">
-                  <use xlink:href="#icon-gongzuotai"></use>
-                </svg> 2018.7-2020.6</span>
-              <span>携程旅行网络有限公司</span>
-              <span>度假流程运营</span>
-            </h4>
-            <div class="description">
-              <p><span>- 跟进系统需求收集，方案沟通，上线验收，后期维护的整体流程</span></p>
-              <p><span>- 内部流程沟通，协调部门流畅运转</span></p>
+              <p>- 性能优化，将转化提高10%</p>
+              <p>- 页面优化？还有时间</p>
             </div>
           </div>
         </li>
@@ -149,17 +166,11 @@
     <div class="body">
       <div class="content">
         <div class="description">
-          <p>- 博客链接：<a href="https://blog.csdn.net/qq_40029828" target="_blank">
-              CSDN</a>，目前已有73篇技术文章
-            </a></p>
-          <!-- <p>- 代码管理：<a href="https://github.com/SuperPowerZhang?tab=repositories" target="_blank">
-              Github</a>，过去3个月有300次提交
-            </a></p> -->
-          <p>- 兴趣爱好：羽毛球、滑雪、画画</p>
+          <p>- 兴趣爱好：羽毛球、滑雪、旅行</p>
         </div>
       </div>
     </div>
   </section>
-  <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="./index.js"></script>
   <script type="text/javascript" src="//at.alicdn.com/t/font_2256030_rjbgvtew9q.js"></script>
 </body>
