@@ -117,7 +117,6 @@ section a{
 
 }
 section .header {
-    padding-top:10px;
     font-size: 16px;
     font-weight: 600;
     color:rgb(69, 109, 109);
@@ -125,7 +124,7 @@ section .header {
 }
 
 section .body ul li {
-  margin-top:10px;
+  /* margin-top:6px; */
 }
 
 section .body ul li  h4{
@@ -176,17 +175,87 @@ section .body ul li .content {
     margin-left: 10px;
 }
 .body .content .description{
-    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
 }
-/* .work{
-    page-break-before:always;
+.body .content .description div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.body .content .description  p{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.body .content .description strong{
+   font-weight: 600;
+   white-space: nowrap;
+}
+.body .content .description .problems{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}   
+.body .content .description  .sub-des{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    padding-left: 12px;
+}
+.body .content .description  .sub-des i{
+    display: inline-block;
+}
+.body .content .description  .sub-des .sep{
+    white-space: nowrap;
+}
+.body .content .description  .sub-des i:last-child{
+    text-align: right;
+}
+.body .content .description  .sub-des i:first-child{
+    width: 44%;
+}
+.body .content .description  .sub-des i:last-child::before{
+    content: '------';
+}
+@media(max-width: 500px){
+    .body .content .description  .sub-des i:first-child{
+        width: 100%;
+    }
+    .body .content .description  .sub-des i:last-child{
+        text-align: left;
+    }
+    .body .content .description  .sub-des{
+        width: 100%;
+        display: block;
+    }
+}
+/* .body .content .description  .sub-des i:first-child::after{
+    
 } */
+.body .content .description  .sub-des::before{
+    content: '✻';
+    position: absolute;
+    top: 0;
+    left: -4px;
+}
+
+.work{
+    /* page-break-before:always; */
+}
 .icon {
        width: 1em; height: 1em;
        vertical-align: -0.15em;
        fill: currentColor;
        overflow: hidden;
-      font-size:18px;
+       font-size:18px;
 }
 .edu .body   h4{
     display:flex;
