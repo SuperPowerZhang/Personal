@@ -19,15 +19,14 @@
   </header>
   <section class="intro">
     <div class="info">
-      <p class="name">张玉丽</p>
       <p class="basic">
-        <span>26岁</span>
-        <span>上海</span>
-        <span class="job">期望职位：前端开发工程师</span>
-      </p>
+        <span class="name">张玉丽</span>
+        <span> 27岁</span>
+        <span class="job"> 期望职位：前端开发工程师</span>
+        <span class="empty"></span>
       <p class="selfintro">
-        简介：携程机票<em>H5</em>和<em>小程序</em>前端开发，主要技术：<em>Vue</em><em>React</em><em><em>Taro</em></em><em>Node.js</em><em>ts</em>
-        ，主要对接业务：预订主流程、微组件、拉新活动需求
+        主要技术：<em>Vue</em><em>React</em><em><em>Taro</em></em><em>webpack</em><em>ts</em>
+      </p>
       </p>
     </div>
   </section>
@@ -39,25 +38,26 @@
           <div class="content">
             <h4><span><svg class="icon" aria-hidden="true">
                   <use xlink:href="#icon-gongzuotai"></use>
-                </svg> 2020.7-至今</span>
+                </svg> 2022.4-2022.12</span>
+              <span>虾皮信息科技有限公司</span>
+              <span>前端开发工程师</span>
+            </h4>
+            <div class="description">
+              <p><span>- 支持虾皮零售业务B端需求迭代</span></p>
+              <p><span>- 基于<em>webpck</em>的MF和<em>vue cli</em>对现有项目进行改造，提升开发效率</span></p>
+              <p><span>- 负责团队中<em>commit</em>相关规范，并提供工具支持</span></p>
+            </div>
+            <h4><span><svg class="icon" aria-hidden="true">
+                  <use xlink:href="#icon-gongzuotai"></use>
+                </svg> 2020.7-2022.3</span>
               <span>携程旅行网络有限公司</span>
               <span>机票前端开发</span>
             </h4>
             <div class="description">
-              <p><span>- <em>小程序</em>和<em>H5</em>预订主流程需求支持，基于<em>Taro</em>和<em>React</em>实现一套代码多端复用</span></p>
-              <p><span>- 微前端项目和拉新活动主要负责人，支持机票盲盒、拉新助力等各项活动</span></p>
+              <p><span>- <em>小程序</em>和<em>H5</em>预订主流程C端需求支持，基于<em>Taro</em>和<em>React</em>实现一套代码多端复用</span></p>
+              <p><span>- 微前端项目和拉新活动主要负责人，支持机票盲盒等各项活动</span></p>
               <p><span>- 无障碍预订主流程搭建，实现了<em>Aria</em>技术在机票前端的首次实践</span></p>
-              <p><span>- 带实习同学工作学习，部门内部分享2次</span></p>
-            </div>
-            <h4><span><svg class="icon" aria-hidden="true">
-                  <use xlink:href="#icon-gongzuotai"></use>
-                </svg> 2018.7-2020.6</span>
-              <span>携程旅行网络有限公司</span>
-              <span>度假流程运营</span>
-            </h4>
-            <div class="description">
-              <p><span>- 跟进系统需求收集，方案沟通，上线验收，后期维护的整体流程</span></p>
-              <p><span>- 内部流程沟通，协调部门流畅运转</span></p>
+              <p><span>- 带实习同学工作学习，组织和参与部门技术分享</span></p>
             </div>
           </div>
         </li>
@@ -89,17 +89,55 @@
       <ul>
         <li>
           <div class="content">
-            <h4><svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-face"></use>
-              </svg> 1、<em>Taro</em>转多端小程序和h5</h4>
+            <h4> 1、项目基础设施优化<span>所属公司：虾皮</span> </h4>
             <div class="description">
-              <p><strong>- 背景：</strong>h5和小程序渠道功能、交互、页面高度相似，在两个项目中各自维护，需求需重复开发，占用资源。另，历史原因部分逻辑和埋点未统一，维护成本高</p>
+              <p><strong>- 背景：</strong>旧系统模块很多，在一个项目中开发和构建，文件多，耦合程度高，启动速度慢，不便于进行需求迭代和新技术应用，主要技术栈为<em>Vue</em><em>
+                  webpack</em></p>
+              <p><strong>- 目标：</strong>提升项目构建速度，并使用微前端解耦</p>
+              <div>
+                <strong>- 问题：</strong>
+                <div class="problems">
+                  <p class="sub-des"><i>webpack配置文件冗杂，不便于优化分析和使用</i><i>使用<em>vue-cli</em>替换<em>webpack</em></i></p>
+                  <p class="sub-des"><i>项目庞大，迁移成本高</i><i>基于<em>webpack5</em>的模块联邦功能逐步进行微前端改造</i></p>
+                </div>
+              </div>
+              <p><strong>- 成果：</strong>项目秒开时间从3min降为15s，基本完成微前端模块改造</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="content">
+            <h4>2、团队commit message规范 <span>所属公司：虾皮</span></h4>
+            <div class="description">
+              <p><strong>- 背景：</strong>代码commit message相关规范缺失，后续回溯难度。技术选型为<em>commitlint</em>和<em>git cz</em></p>
+              <p><strong>- 目标：</strong>对commit过程进行相关规范</p>
+              <div>
+                <strong>- 问题：</strong>
+                <div class="problems">
+                  <p class="sub-des"><i>在接入项目中commit操作时接入lint工具命令</i><i>基于<em>husky</em>进行实现</i></p>
+                  <p class="sub-des"><i>git cz 与comitlint部分配置相互覆盖 </i><i>结合代码进行配置修改和适配</i></p>
+                  <p class="sub-des"><i>调试困难</i><i>结合打包后代码和源码进行调试定位</i></p>
+                </div>
+              </div>
+              <p><strong>- 成果：</strong>完成lint工具的发布上线并在接入项目使用</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="content">
+            <h4>
+              <p>3、<em>Taro</em>转多端小程序和h5</p><span>所属公司：携程</span>
+            </h4>
+            <div class="description">
+              <p><strong>-
+                  背景：</strong>h5和小程序渠道功能、交互、页面高度相似，在两个项目中各自维护，需求需重复开发，占用资源。另，历史原因部分逻辑和埋点未统一，维护成本高</em>
+              </p>
               <p><strong>- 目标：</strong>使用<em>Taro</em>框架实现一套代码，多端复用</p>
               <div>
                 <strong>- 问题：</strong>
                 <div class="problems">
                   <p class="sub-des"><i><em>Taro</em>框架落地携程主板小程序框架有适配问题</i><i>在build过程中注入兼容适配代码</i></p>
-                  <p class="sub-des"><i>渲染速度慢，首屏白屏时间长</i><i>使用预请求数据、添<em>LazyCreate</em>二屏组件等方案</i></p>
+                  <p class="sub-des"><i>渲染速度慢，首屏白屏时间长</i><i>使用预请求数据、添加<em>LazyCreate</em>二屏组件等方案</i></p>
                   <p class="sub-des"><i>不同平台、机型对API和css样式支持程度不同</i><i>基于平台使用对应API/替代方案、不断调试</i></p>
                 </div>
               </div>
@@ -109,16 +147,14 @@
         </li>
         <li>
           <div class="content">
-            <h4><svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-zhangdan"></use>
-              </svg>2、微前端组件</h4>
+            <h4>4、微前端组件 <span>所属公司：携程</span></h4>
             <div class="description">
               <p><strong>- 背景：</strong>机票以不同形式开展多场拉新活动，流程均为用户在微信环境分享给好友助力。而多场拉新活动各自重复开发造成资源浪费
               <p><strong>- 目标：</strong>封装拉新组件，便于不同团队不同技术栈开发的各页面接入 </p>
               <div>
                 <strong>- 问题：</strong>
                 <div class="problems">
-                  <p class="sub-des"><i>微组件框架对不同技术栈组件的支持</i><i>基于路由实现<em>SSR</em>，下发不同html模板进而加载对应js</i></p>
+                  <p class="sub-des"><i>微组件框架对不同技术栈组件的支持</i><i>基于路由实现<em>SSR</em>，下发不同html模板加载对应js</i></p>
                   <p class="sub-des"><i>微组件与页面的全局变量可能相互污染</i><i>获取js内容，使用<em>proxy window</em>实现沙箱隔离</i></p>
                   <p class="sub-des"><i>微组件与页面的css样式相互影响</i><i>使用<em>css module</em>对组件样式进行隔离</i></p>
                 </div>
@@ -126,26 +162,6 @@
               <p><strong>- 成果：</strong>基于<em>微件化</em>和<em>SSR</em>实现微前端活动组件，为每场活动接入节省了6pd</p>
             </div>
         </li>
-        <li>
-        <li>
-          <div class="content">
-            <h4><svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-huadian-xiangrikui"></use>
-              </svg> 3、无障碍预订流程</h4>
-            <div class="description">
-              <p><strong>- 背景：</strong>现有预订流程对有障碍人群支持度不够，预订受阻。</p>
-              <p><strong>- 目标：</strong>搭建无障碍预订流程，支持有障碍人士能够无阻下单</p>
-              <div>
-                <strong>- 问题：</strong>
-                <div class="problems">
-                  <p class="sub-des"><i>航班号、时间、钱等业务知识语音识别困难</i><i>各自抽象识别函数，添加给对应dom的<em>aria-label</em>属性</i></p>
-                  <p class="sub-des"><i>弹窗、toast无法出现时用户无法感知</i><i>基于<em>aria</em>和<em>tabindex</em>属性实现其自动朗读</i></p>
-                </div>
-              </div>
-              <p><strong>- 成果：</strong>实现基于颜色、字号、交互、语音识别的无障碍预订流程</p>
-            </div>
-        </li>
-        <li>
       </ul>
     </div>
   </section>
@@ -158,7 +174,7 @@
           <div class="content">
             <div class="description">
               <p>- <em>英语</em>专业八级证书、大学英语6级（613）</p>
-              <p>- 兴趣爱好：羽毛球、滑雪、画画</p>
+              <p>- 兴趣爱好：滑雪、羽毛球、画画</p>
             </div>
           </div>
         </li>
