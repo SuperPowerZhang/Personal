@@ -244,12 +244,12 @@ section .body ul li .content {
 
 .body .content .description .sub-des {
   width: 100%;
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  position: relative;
-  padding-left: 12px;
+  position: relative; */
+  /* padding-left: 12px; */
 }
 
 .body .content .description .sub-des i {
