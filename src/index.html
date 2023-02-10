@@ -6,13 +6,15 @@
   <meta name="viewport"
     content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>个人简介</title>
-  <link rel="stylesheet" href="./index.css">
-  <link rel="stylesheet" href="./init.css">
+  <link rel="stylesheet" type="text/css"  href="init.css">
+  <link rel="stylesheet" type="text/css"  href="index.css">
 </head>
 
 <body>
+  <script>
+  </script>
   <header class="contact">
-    <li><span>手机/微信：</span><a href="tel:15216821727">15216821727</a></li>
+    <li><span>手机：</span><a href="tel:15256424039">15256424039</a></li>
     <li>
       <span>邮箱：</span><a href="mailto:yuli_zhang@foxmail.com">yuli_zhang@foxmail.com</a>
     </li>
@@ -21,11 +23,11 @@
     <div class="info">
       <p class="basic">
         <span class="name">张玉丽</span>
-        <span> 27岁</span>
-        <span class="job"> 期望职位：前端开发工程师</span>
-        <span class="empty"></span>
       <p class="selfintro">
-        主要技术：<em>Vue</em><em>React</em><em><em>Taro</em></em><em>webpack</em><em>ts</em>
+        <span> 基本信息：27岁 ｜ 3年前端开发经验 ｜ 本科.统招</span>
+      </p>
+      <p class="selfintro">
+        主要技术：<em>Vue</em><em>React</em><em><em>Taro</em></em><em>Webpack</em><em>TS</em>
       </p>
       </p>
     </div>
@@ -40,12 +42,12 @@
                   <use xlink:href="#icon-gongzuotai"></use>
                 </svg> 2022.4-2022.12</span>
               <span>虾皮信息科技有限公司</span>
-              <span>前端开发工程师</span>
+              <span>Retail前端开发</span>
             </h4>
             <div class="description">
-              <p><span>- 支持虾皮零售业务B端需求迭代</span></p>
-              <p><span>- 基于<em>webpck</em>的MF和<em>vue cli</em>对现有项目进行改造，提升开发效率</span></p>
-              <p><span>- 负责团队中<em>commit</em>相关规范，并提供工具支持</span></p>
+              <p><span>- 支持零售业务B端需求迭代</span></p>
+              <p><span>- 参与前端基础设施建设，提升团队开发效率</p>
+              <p><span>- 负责团队的英语角活动开展，参与技术分享</p>
             </div>
             <h4><span><svg class="icon" aria-hidden="true">
                   <use xlink:href="#icon-gongzuotai"></use>
@@ -91,14 +93,15 @@
           <div class="content">
             <h4> 1、项目基础设施优化<span>所属公司：虾皮</span> </h4>
             <div class="description">
-              <p><strong>- 背景：</strong>旧系统模块很多，在一个项目中开发和构建，文件多，耦合程度高，启动速度慢，不便于进行需求迭代和新技术应用，主要技术栈为<em>Vue</em><em>
-                  webpack</em></p>
-              <p><strong>- 目标：</strong>提升项目构建速度，并使用微前端解耦</p>
+              <p><strong>- 背景：</strong>作为零售业务的主要系统之一：PMS（商品管理系统)，平台功能复杂。前端使用一个项目维护，随着发展迭代成为“巨石应用”，开发体验性差，需求迭代成本高。主要技术栈为<em>Vue</em><em>Webpack</em></p>
+              <p><strong>- 目标：</strong>提升项目开发体验和迭代效率</p>
               <div>
-                <strong>- 问题：</strong>
+                <strong>- 工作：</strong>
                 <div class="problems">
-                  <p class="sub-des"><i>webpack配置文件冗杂，不便于优化分析和使用</i><i>使用<em>vue-cli</em>替换<em>webpack</em></i></p>
-                  <p class="sub-des"><i>项目庞大，迁移成本高</i><i>基于<em>webpack5</em>的模块联邦功能逐步进行微前端改造</i></p>
+                  <!-- TODO 哪些优化是内置的 -->
+                  <p class="sub-des">基于<em>Webpack</em>的<em>MF</em>对计划域模块进行微前端改造</p>
+                  <p class="sub-des">使用<em>Vue-cli</em>脚手架替换配置<em>Webpack</em>，删除冗余配置</p>
+                  <p class="sub-des">负责团队的<em>commit</em>规范，提供工具支持减轻人工记忆的心智负担</i></p>
                 </div>
               </div>
               <p><strong>- 成果：</strong>项目秒开时间从3min降为15s，基本完成微前端模块改造</p>
@@ -107,19 +110,19 @@
         </li>
         <li>
           <div class="content">
-            <h4>2、团队commit message规范 <span>所属公司：虾皮</span></h4>
+            <h4>2、变价审批页面改造 <span>所属公司：虾皮</span></h4>
             <div class="description">
-              <p><strong>- 背景：</strong>代码commit message相关规范缺失，后续回溯难度。技术选型为<em>commitlint</em>和<em>git cz</em></p>
-              <p><strong>- 目标：</strong>对commit过程进行相关规范</p>
+              <p><strong>- 背景：</strong>SRM（供应商门户系统）的变价审批页面长时间未迭代，数据状态和界面设计未及时更新。主要技术栈为<em>Vue2</em><em>Vuex</em></p>
+              <p><strong>- 目标：</strong>基于最新的技术栈对变价审批页面进行重构</p>
               <div>
-                <strong>- 问题：</strong>
+                <strong>- 工作：</strong>
                 <div class="problems">
-                  <p class="sub-des"><i>在接入项目中commit操作时接入lint工具命令</i><i>基于<em>husky</em>进行实现</i></p>
-                  <p class="sub-des"><i>git cz 与comitlint部分配置相互覆盖 </i><i>结合代码进行配置修改和适配</i></p>
-                  <p class="sub-des"><i>调试困难</i><i>结合打包后代码和源码进行调试定位</i></p>
+                  <p class="sub-des">结合<em>Vue2.7</em><em>Pinia</em><em>jsx</em>对模块重新设计和开发</p>
+                  <p class="sub-des">基于最新的UI规范，使用新的UI组件快速搭建页面</p>
+                  <p class="sub-des">配合后端微服务工作，进行接口迁移和调试</p>
                 </div>
               </div>
-              <p><strong>- 成果：</strong>完成lint工具的发布上线并在接入项目使用</p>
+              <p><strong>- 成果：</strong>完成需求按时迭代上线，组内展示和讨论当前技术栈的实践案例</p>
             </div>
           </div>
         </li>
@@ -130,15 +133,13 @@
             </h4>
             <div class="description">
               <p><strong>-
-                  背景：</strong>h5和小程序渠道功能、交互、页面高度相似，在两个项目中各自维护，需求需重复开发，占用资源。另，历史原因部分逻辑和埋点未统一，维护成本高</em>
-              </p>
+                  背景：</strong>h5和小程序渠道功能、交互、页面高度相似，在两个项目中各自维护，需求需重复开发，占用资源</em>主要技术栈为<em>Taro</em><em>React</em></p>
               <p><strong>- 目标：</strong>使用<em>Taro</em>框架实现一套代码，多端复用</p>
               <div>
-                <strong>- 问题：</strong>
+                <strong>- 工作：</strong>
                 <div class="problems">
-                  <p class="sub-des"><i><em>Taro</em>框架落地携程主板小程序框架有适配问题</i><i>在build过程中注入兼容适配代码</i></p>
-                  <p class="sub-des"><i>渲染速度慢，首屏白屏时间长</i><i>使用预请求数据、添加<em>LazyCreate</em>二屏组件等方案</i></p>
-                  <p class="sub-des"><i>不同平台、机型对API和css样式支持程度不同</i><i>基于平台使用对应API/替代方案、不断调试</i></p>
+                  <p class="sub-des">完成首页-列表页的代码框架替换，并使用使用预请求、<em>LazyCreate</em>二屏组件等方案优化用户体验</p>
+                  <p class="sub-des">针对不同平台、机型对API和css样式支持程度不同的问题，整理并输出兼容方案</p>
                 </div>
               </div>
               <p><strong>- 成果：</strong>完成微信、百度、支付宝、头条等原生小程序和h5的转换，CR显著提升5%</p>
@@ -149,23 +150,22 @@
           <div class="content">
             <h4>4、微前端组件 <span>所属公司：携程</span></h4>
             <div class="description">
-              <p><strong>- 背景：</strong>机票以不同形式开展多场拉新活动，流程均为用户在微信环境分享给好友助力。而多场拉新活动各自重复开发造成资源浪费
+              <p><strong>- 背景：</strong>机票以不同形式开展多场拉新活动，流程均为用户在微信环境分享给好友助力，而多场拉新活动各自重复开发造成资源浪费.
               <p><strong>- 目标：</strong>封装拉新组件，便于不同团队不同技术栈开发的各页面接入 </p>
               <div>
-                <strong>- 问题：</strong>
+                <strong>- 工作：</strong>
                 <div class="problems">
-                  <p class="sub-des"><i>微组件框架对不同技术栈组件的支持</i><i>基于路由实现<em>SSR</em>，下发不同html模板加载对应js</i></p>
-                  <p class="sub-des"><i>微组件与页面的全局变量可能相互污染</i><i>获取js内容，使用<em>proxy window</em>实现沙箱隔离</i></p>
-                  <p class="sub-des"><i>微组件与页面的css样式相互影响</i><i>使用<em>css module</em>对组件样式进行隔离</i></p>
+                  <p class="sub-des">主要技术栈为<em>Vue</em><em>node.js</em><em>SSR</em>，完成项目搭建，支持不同技术栈组件接入</p>
+                  <p class="sub-des">使用<em>proxy window</em>和<em>css module</em>实现js隔离和css隔离</p>
+                  <p class="sub-des">基于<em>mono-repo</em>重构项目结构，扩展项目边界</p>
                 </div>
               </div>
-              <p><strong>- 成果：</strong>基于<em>微件化</em>和<em>SSR</em>实现微前端活动组件，为每场活动接入节省了6pd</p>
+              <p><strong>- 成果：</strong>基于<em>微件化</em>完成不同活动页面接入助力组件，为每场活动接入节省了6pd</p>
             </div>
         </li>
       </ul>
     </div>
   </section>
-
   <section class="other">
     <div class="header">其他</div>
     <div class="body">
@@ -181,7 +181,6 @@
       </ul>
     </div>
   </section>
-  <script type="text/javascript" src="//at.alicdn.com/t/font_2256030_rjbgvtew9q.js"></script>
 </body>
 
 </html>
