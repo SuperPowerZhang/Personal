@@ -1,5 +1,5 @@
 body {
-  max-width: 210mm;
+  max-width: 240mm;
   max-height: 297mm;
   font-size: 16px;
   line-height: 1.5;
@@ -8,7 +8,7 @@ body {
   margin-right: auto;
 }
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
   body {
     font-size: 14px;
     padding: 12px;
@@ -29,17 +29,15 @@ header {
   font-weight: 600;
   justify-content: space-between;
   border-bottom: 2px solid rgb(69, 109, 109);
-
 }
 
 header li {
   display: inline-block;
   padding: 6px;
   text-align: center;
-
 }
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
   header li {
     padding: 6px;
   }
@@ -47,9 +45,8 @@ header li {
 
 header li a {
   font-size: 14px;
-  color: rgb(88, 132, 202)
+  color: rgb(88, 132, 202);
 }
-
 
 .intro {
   display: flex;
@@ -57,7 +54,7 @@ header li a {
   justify-content: flex-start;
 }
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
   .intro {
     flex-direction: column;
     justify-content: center;
@@ -74,7 +71,7 @@ header li a {
   height: 145px;
 }
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
   .img {
     margin-left: auto;
     margin-right: auto;
@@ -95,11 +92,10 @@ header li a {
   font-weight: 600;
 }
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
   .info {
     margin-left: 10px;
     margin-right: 10px;
-
   }
 
   .info .name {
@@ -132,7 +128,6 @@ section {
 
 section a {
   color: rgb(1, 175, 210);
-
 }
 
 section .header {
@@ -164,7 +159,7 @@ section .body ul li h4 {
   font-weight: 600;
 }
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
   section {
     margin-top: 6px;
   }
@@ -172,7 +167,6 @@ section .body ul li h4 {
   section .header {
     font-size: 14px;
   }
-
 }
 
 section .body ul li {
@@ -192,7 +186,7 @@ section .body ul li a {
   padding: 10px;
 }
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
   section .body ul li a {
     padding: 4px;
   }
@@ -272,7 +266,7 @@ section .body ul li .content {
   content: '------';
 }
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
   .body .content .description .sub-des i:first-child {
     width: 100%;
   }
@@ -319,10 +313,9 @@ section .body ul li .content {
 .work .body ul li h4 {
   display: flex;
   justify-content: space-between;
-
 }
 
-@media(min-width:500px) {
+@media (min-width: 500px) {
   .program .body ul .moveUp {
     margin-top: -5px;
   }
