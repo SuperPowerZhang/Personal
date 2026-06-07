@@ -8,140 +8,335 @@
   <title>个人简介</title>
   <link rel="stylesheet" type="text/css"  href="init.css">
   <link rel="stylesheet" type="text/css"  href="index.css">
+  <style>
+    .lang-switch {
+      position: fixed;
+      top: 12px;
+      right: 16px;
+      z-index: 100;
+      display: flex;
+      gap: 6px;
+    }
+    .lang-switch button {
+      padding: 4px 12px;
+      border: 1px solid rgb(69, 109, 109);
+      border-radius: 4px;
+      background: #fff;
+      color: rgb(69, 109, 109);
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .lang-switch button.active {
+      background: rgb(69, 109, 109);
+      color: #fff;
+    }
+    [data-lang] { display: none; }
+    .zh [data-lang="zh"] { display: revert; }
+    .en [data-lang="en"] { display: revert; }
+  </style>
 </head>
 
-<body>
+<body class="zh">
+  <div class="lang-switch" id="lang-switch" style="display:none">
+    <button id="btn-zh" class="active" onclick="switchLang('zh')">中文</button>
+    <button id="btn-en" onclick="switchLang('en')">English</button>
+  </div>
   <script>
+    function switchLang(lang) {
+      document.body.className = lang;
+      document.getElementById('btn-zh').className = lang === 'zh' ? 'active' : '';
+      document.getElementById('btn-en').className = lang === 'en' ? 'active' : '';
+      document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+    }
+
+    (function () {
+      var param = new URLSearchParams(location.search).get('translate');
+      if (param === 'english') {
+        switchLang('en');
+      } else if (param === 'true') {
+        document.getElementById('lang-switch').style.display = 'flex';
+      }
+    })();
   </script>
+
+  <!-- ===== CONTACT ===== -->
   <header class="contact">
-    <li><span>手机：</span><a href="tel:15256424039">15256424039</a></li>
-    <li>
-      <span>邮箱：</span><a href="mailto:yuli_zhang@foxmail.com">yuli_zhang@foxmail.com</a>
-    </li>
+    <ul>
+      <li><span data-lang="zh">手机：</span><span data-lang="en">Phone: </span><a href="tel:15256424039">15256424039</a></li>
+      <li>
+        <span data-lang="zh">邮箱：</span><span data-lang="en">Email: </span><a href="mailto:yuli_zhang@foxmail.com">yuli_zhang@foxmail.com</a>
+      </li>
+    </ul>
   </header>
+
+  <!-- ===== INTRO ===== -->
   <section class="intro">
     <div class="info">
       <p class="basic">
-        <span class="name">张玉丽</span>
-      <p class="selfintro">
-        <span> 基本信息：27岁 ｜ 3年前端开发经验 ｜ 本科.统招</span>
+        <span class="name" data-lang="zh">张玉丽</span>
+        <span class="name" data-lang="en">Yuli Zhang</span>
+      </p>
+      <p class="selfintro" data-lang="zh">
+        <span>基本信息：30岁 ｜ 6年前端开发经验 ｜ 本科.统招</span>
+      </p>
+      <p class="selfintro" data-lang="en">
+        <span>30 years old &nbsp;|&nbsp; 6 years frontend experience &nbsp;|&nbsp; Bachelor's Degree</span>
       </p>
       <p class="selfintro">
-        主要技术：<em>Vue</em><em>React</em><em><em>Taro</em></em><em>Webpack</em><em>TS</em><em>Git</em><em>Jira</em>
-      </p>
+        <span data-lang="zh">主要技术：</span><span data-lang="en">Tech Stack: </span><em>Vue</em><em>React</em><em>Taro</em><em>Webpack</em><em>TS</em><em>Git</em><em>Jira</em>
       </p>
     </div>
   </section>
+
+  <!-- ===== WORK ===== -->
   <section class="work">
-    <div class="header">工作经历</div>
+    <div class="header" data-lang="zh">工作经历</div>
+    <div class="header" data-lang="en">Work Experience</div>
     <div class="body">
       <ul>
         <li>
           <div class="content">
-            <h4><span><svg class="icon" aria-hidden="true">
-                  <use xlink:href="#icon-gongzuotai"></use>
-                </svg> 2022.4-2022.12</span>
-              <span>虾皮信息科技有限公司</span>
-              <span>Retail前端开发</span>
+            <!-- ZhongAn -->
+            <h4>
+              <span><svg class="icon" aria-hidden="true"><use href="#icon-gongzuotai"></use></svg> 2023.1–Present</span>
+              <span data-lang="zh">众安（深圳）科技咨询服务有限公司上海分公司</span>
+              <span data-lang="en">ZhongAn Technology (Shanghai Branch)</span>
+              <span data-lang="zh">Finance前端开发</span>
+              <span data-lang="en">Frontend Engineer – Finance</span>
             </h4>
-            <div class="description">
-              <p><span>- 支持零售业务B端需求迭代</span></p>
-              <p><span>- 参与前端基础设施建设，提升团队开发效率</p>
-              <p><span>- 负责团队英语沙龙活动的策划与执行，积极参与技术分享和知识交流</p>
+            <div class="description" data-lang="zh">
+              <p><span>- 作为 Finance 域唯一前端，全面负责财务业务需求的按质按量交付；后期支持 claim、uw 三域并行开发</span></p>
+              <p><span>- 主导微前端架构迁移，完成旧页面向微前端体系的全量迁移；推进 <em>Antd 5</em> 升级、<em>Nagrand</em> 标准组件替换、<em>Moment.js → Day.js</em> 大规模迁移等技术债治理</span></p>
+              <p><span>- 开发并沉淀通用业务组件与标准 UI 组件（Document Preview、DatePicker、AmountInput、Pagination 等），推动跨域复用</span></p>
+              <p><span>- 参与 <em>AI Code Review</em> 项目核心开发（仓库迁移、Client 迁移、需求实现）；作为团队 Claude AI 布道者，推广 AI 辅助研发工具，提升团队整体效能</span></p>
+              <p><span>- 梳理并沉淀开发流程与技术文档，减少人员变化导致的沟通成本</span></p>
             </div>
-            <h4><span><svg class="icon" aria-hidden="true">
-                  <use xlink:href="#icon-gongzuotai"></use>
-                </svg> 2020.7-2022.3</span>
-              <span>携程旅行网络有限公司</span>
-              <span>机票前端开发</span>
+            <div class="description" data-lang="en">
+              <p><span>- Sole frontend engineer in the Finance domain; owned end-to-end delivery of financial features; later expanded to support Claim and UW domains concurrently</span></p>
+              <p><span>- Led micro-frontend architecture migration, completing full transition of legacy pages; drove tech-debt remediation including <em>Antd 5</em> upgrade, <em>Nagrand</em> component standardization, and large-scale <em>Moment.js → Day.js</em> migration</span></p>
+              <p><span>- Built and published reusable business & UI components (Document Preview, DatePicker, AmountInput, Pagination, etc.) adopted across multiple domains</span></p>
+              <p><span>- Contributed core features to the <em>AI Code Review</em> project (repo migration, client migration, feature implementation); championed Claude AI adoption within the team, improving overall R&D efficiency</span></p>
+              <p><span>- Documented development workflows and technical standards to reduce onboarding and communication costs</span></p>
+            </div>
+
+            <!-- Shopee -->
+            <h4>
+              <span><svg class="icon" aria-hidden="true"><use href="#icon-gongzuotai"></use></svg> 2022.4–2022.12</span>
+              <span data-lang="zh">虾皮信息科技有限公司</span>
+              <span data-lang="en">Shopee (Sea Group)</span>
+              <span data-lang="zh">Retail前端开发</span>
+              <span data-lang="en">Frontend Engineer – Retail</span>
             </h4>
-            <div class="description">
+            <div class="description" data-lang="zh">
+              <p><span>- 支持零售业务B端需求迭代</span></p>
+              <p><span>- 参与前端基础设施建设，提升团队开发效率</span></p>
+              <p><span>- 负责团队英语沙龙活动的策划与执行，积极参与技术分享和知识交流</span></p>
+            </div>
+            <div class="description" data-lang="en">
+              <p><span>- Iterated on B-side features for retail business</span></p>
+              <p><span>- Contributed to frontend infrastructure improvements to increase team velocity</span></p>
+              <p><span>- Organized and facilitated team English salon events; actively participated in tech talks and knowledge-sharing sessions</span></p>
+            </div>
+
+            <!-- Ctrip Flight Frontend -->
+            <h4>
+              <span><svg class="icon" aria-hidden="true"><use href="#icon-gongzuotai"></use></svg> 2020.7–2022.3</span>
+              <span data-lang="zh">携程旅行网络有限公司</span>
+              <span data-lang="en">Trip.com Group (Ctrip)</span>
+              <span data-lang="zh">机票前端开发</span>
+              <span data-lang="en">Frontend Engineer – Flights</span>
+            </h4>
+            <div class="description" data-lang="zh">
               <p><span>- <em>小程序</em>和<em>H5</em>预订主流程C端需求支持，基于<em>Taro</em>和<em>React</em>实现一套代码多端复用</span></p>
               <p><span>- 微前端项目和拉新活动主要负责人，支持机票盲盒等各项活动</span></p>
               <p><span>- 无障碍预订主流程搭建，实现了<em>Aria</em>技术在机票前端的首次实践</span></p>
               <p><span>- 带实习同学工作学习，组织和参与部门技术分享</span></p>
             </div>
-            <h4><span><svg class="icon" aria-hidden="true">
-              <use xlink:href="#icon-gongzuotai"></use>
-            </svg> 2018.7-2020.6</span>
-          <span>携程旅行网络有限公司</span>
-          <span>邮轮流程运营</span>
-        </h4>
-        <div class="description">
-          <p><span>- 驱动需求收集，协调方案沟通，实施上线验收，并负责后续系统维护的整个流程管理</span></p>
-        </div>
+            <div class="description" data-lang="en">
+              <p><span>- Delivered C-side booking flow features for <em>Mini Program</em> and <em>H5</em>, achieving cross-platform code reuse via <em>Taro</em> + <em>React</em></span></p>
+              <p><span>- Primary owner of micro-frontend project and user-acquisition campaigns (e.g., flight blind-box activity)</span></p>
+              <p><span>- Pioneered <em>ARIA</em> accessibility implementation in the flights booking flow — a first for the team</span></p>
+              <p><span>- Mentored interns; organized and participated in department tech-sharing sessions</span></p>
+            </div>
+
+            <!-- Ctrip Cruise Operations -->
+            <h4>
+              <span><svg class="icon" aria-hidden="true"><use href="#icon-gongzuotai"></use></svg> 2018.7–2020.6</span>
+              <span data-lang="zh">携程旅行网络有限公司</span>
+              <span data-lang="en">Trip.com Group (Ctrip)</span>
+              <span data-lang="zh">邮轮流程运营</span>
+              <span data-lang="en">Cruise Operations</span>
+            </h4>
+            <div class="description" data-lang="zh">
+              <p><span>- 驱动需求收集，协调方案沟通，实施上线验收，并负责后续系统维护的整个流程管理</span></p>
+            </div>
+            <div class="description" data-lang="en">
+              <p><span>- Drove requirement gathering, coordinated cross-functional solution design, managed release validation, and oversaw ongoing system maintenance</span></p>
+            </div>
           </div>
         </li>
       </ul>
     </div>
   </section>
+
+  <!-- ===== EDUCATION ===== -->
   <section class="edu">
-    <div class="header">教育经历</div>
+    <div class="header" data-lang="zh">教育经历</div>
+    <div class="header" data-lang="en">Education</div>
     <div class="body">
       <ul>
         <li>
           <div class="content">
             <h4>
-              <span><svg class="icon" aria-hidden="true">
-                  <use xlink:href="#icon-xuexiao"></use>
-                </svg> 2014.8-2018.6</span><span>华东理工大学</span>
-              <span>信息管理与信息系统 | 本科</span>
-              <span>英语 | 本科辅修</span>
-              <span>GPA：3.5/4.0</span>
+              <span><svg class="icon" aria-hidden="true"><use href="#icon-xuexiao"></use></svg> 2014.8–2018.6</span>
+              <span data-lang="zh">华东理工大学</span>
+              <span data-lang="en">East China University of Science and Technology</span>
+              <span data-lang="zh">信息管理与信息系统 | 本科</span>
+              <span data-lang="en">Information Management &amp; Information Systems | Bachelor's</span>
+              <span data-lang="zh">英语 | 本科辅修</span>
+              <span data-lang="en">English | Minor</span>
+              <span>GPA: 3.5/4.0</span>
             </h4>
           </div>
         </li>
       </ul>
     </div>
   </section>
+
+  <!-- ===== PROJECTS ===== -->
   <section class="program">
-    <div class="header">项目经历</div>
+    <div class="header" data-lang="zh">项目经历</div>
+    <div class="header" data-lang="en">Project Experience</div>
     <div class="body">
       <ul>
-        <li>
-          <div class="content">
-            <h4> 1、项目基础设施优化<span>所属公司：虾皮</span> </h4>
-            <div class="description">
-              <p><strong>- 背景：</strong>作为零售业务的主要系统之一：PMS（商品管理系统)，平台功能复杂。前端使用一个项目维护，随着发展迭代成为“巨石应用”，开发体验性差，需求迭代成本高。主要技术栈为<em>Vue</em><em>Webpack</em></p>
-              <p><strong>- 目标：</strong>提升项目开发体验和迭代效率</p>
-              <div>
-                <strong>- 工作：</strong>
-                <div class="problems">
-                  <p class="sub-des">基于<em>Webpack</em>的<em>MF</em>对计划域模块进行微前端改造</p>
-                  <p class="sub-des">使用<em>Vue-cli</em>脚手架替换配置<em>Webpack</em>，删除冗余配置</p>
-                  <p class="sub-des">负责团队的<em>commit</em>规范，提供工具支持减轻人工记忆的心智负担</i></p>
-                </div>
-              </div>
-              <p><strong>- 成果：</strong>项目秒开时间从180s降为75s，基本完成微前端模块改造</p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="content">
-            <h4>2、变价审批页面改造 <span>所属公司：虾皮</span></h4>
-            <div class="description">
-              <p><strong>- 背景：</strong>SRM（供应商门户系统）的变价审批页面长时间未迭代，数据状态和界面设计存在缺陷。主要技术栈为<em>Vue2</em><em>Vuex</em></p>
-              <p><strong>- 目标：</strong>基于最新的技术栈对变价审批页面进行重构</p>
-              <div>
-                <strong>- 工作：</strong>
-                <div class="problems">
-                  <p class="sub-des">结合<em>Vue2.7</em><em>Pinia</em><em>jsx</em>对模块重新设计和开发</p>
-                  <p class="sub-des">基于最新的UI规范，使用新的UI组件快速搭建页面</p>
-                  <p class="sub-des">协同后端微服务工作，进行接口迁移和调试</p>
-                </div>
-              </div>
-              <p><strong>- 成果：</strong>项目按时上线，在团队内部展示并进行技术交流，成为当前技术栈的实践案例</p>
-            </div>
-          </div>
-        </li>
+        <!-- Project 1 -->
         <li>
           <div class="content">
             <h4>
-              <p>3、<em>Taro</em>转多端小程序和h5</p><span>所属公司：携程</span>
+              <span data-lang="zh">1、微前端架构标准化与技术债治理</span>
+              <span data-lang="en">1. Micro-Frontend Standardization &amp; Tech Debt Remediation</span>
+              <span data-lang="zh">所属公司：众安</span>
+              <span data-lang="en">Company: ZhongAn</span>
             </h4>
-            <div class="description">
-              <p><strong>-
-                  背景：</strong>h5和小程序渠道功能、交互、页面高度相似，在两个项目中各自维护，需求需重复开发，占用资源。</em>主要技术栈为<em>Taro</em><em>React</em></p>
+            <div class="description" data-lang="zh">
+              <p><strong>- 背景：</strong>Finance 微前端项目历史包袱重，使用过时组件（antd 旧版、非标准 UI 库）、<em>Moment.js</em> 等高体积依赖，缺乏统一规范，影响可维护性和跨域协作。主要技术栈为 <em>React</em><em>TypeScript</em><em>Antd</em></p>
+              <p><strong>- 目标：</strong>完成全域技术栈标准化，降低技术债，提升代码质量和团队协作效率</p>
+              <div>
+                <strong>- 工作：</strong>
+                <div class="problems">
+                  <p class="sub-des">将 Finance 域所有非标准 antd 组件迁移至 <em>Nagrand</em> 标准组件库，覆盖 Table、Form、Modal 等高频组件</p>
+                  <p class="sub-des">完成 <em>genesis-web-finance</em> 包全量 <em>Day.js</em> 迁移，彻底移除 Moment.js 依赖，建立迁移规范文档供其他域参考</p>
+                  <p class="sub-des">完成 <em>Antd 5</em> 升级及所有入口页面前端标准化，梳理指导文档推广至全域；整合 <em>i18n module</em>，接入 auto_collect_i18n_keys 脚本</p>
+                  <p class="sub-des">完善项目 ESLint 规范，提升代码质量；主导旧页面向微前端体系的全量迁移</p>
+                </div>
+              </div>
+              <p><strong>- 成果：</strong>全面消除 Finance 域技术债，统一技术栈；迁移文档被其他域采纳参考，推动跨域标准化落地</p>
+            </div>
+            <div class="description" data-lang="en">
+              <p><strong>- Background: </strong>The Finance micro-frontend project carried heavy legacy debt — outdated components (old Antd, non-standard UI libraries), high-bundle dependencies like <em>Moment.js</em>, and no unified standards, impacting maintainability and cross-domain collaboration. Stack: <em>React</em><em>TypeScript</em><em>Antd</em></p>
+              <p><strong>- Goal: </strong>Standardize the full-domain tech stack, reduce tech debt, and improve code quality and team efficiency</p>
+              <div>
+                <strong>- Work: </strong>
+                <div class="problems">
+                  <p class="sub-des">Migrated all non-standard Antd components in the Finance domain to the <em>Nagrand</em> design system, covering high-frequency components such as Table, Form, and Modal</p>
+                  <p class="sub-des">Completed full <em>Day.js</em> migration of the <em>genesis-web-finance</em> package, eliminating Moment.js; authored migration guidelines adopted by other domains</p>
+                  <p class="sub-des">Completed <em>Antd 5</em> upgrade and frontend standardization of all entry pages; integrated <em>i18n module</em> and connected the auto_collect_i18n_keys script; rolled out guidelines domain-wide</p>
+                  <p class="sub-des">Strengthened ESLint configuration; led full migration of legacy pages into the micro-frontend system</p>
+                </div>
+              </div>
+              <p><strong>- Result: </strong>Eliminated all Finance domain tech debt and unified the tech stack; migration docs adopted by other domains, driving org-wide standardization</p>
+            </div>
+          </div>
+        </li>
+
+        <!-- Project 2 -->
+        <li>
+          <div class="content">
+            <h4>
+              <span data-lang="zh">2、通用组件开发与沉淀</span>
+              <span data-lang="en">2. Shared Component Library Development</span>
+              <span data-lang="zh">所属公司：众安</span>
+              <span data-lang="en">Company: ZhongAn</span>
+            </h4>
+            <div class="description" data-lang="zh">
+              <p><strong>- 背景：</strong>各业务域重复开发相似 UI 组件，缺乏统一标准组件库支撑，导致开发成本高、交互不一致。主要技术栈为 <em>React</em><em>TypeScript</em><em>Nagrand</em></p>
+              <p><strong>- 目标：</strong>抽取通用业务组件与标准 UI 组件，沉淀至组件库，推动跨域复用</p>
+              <div>
+                <strong>- 工作：</strong>
+                <div class="problems">
+                  <p class="sub-des">参与 Document Preview、DatePicker support24、AmountInput、唯一要素组件等需求讨论及开发</p>
+                  <p class="sub-des">开发 Cards、SectionContainer、Alert、Pagination、Anchor 等标准 UI 组件并沉淀至 Nagrand 组件库</p>
+                  <p class="sub-des">开发富文本组件，参与兼容性方案设计及测试用例补充，输出沉淀文档</p>
+                </div>
+              </div>
+              <p><strong>- 成果：</strong>组件在多个域复用，降低重复开发成本；标准化 UI 组件提升跨域交互一致性</p>
+            </div>
+            <div class="description" data-lang="en">
+              <p><strong>- Background: </strong>Business domains were independently rebuilding similar UI components without a shared standard library, causing duplicated effort and inconsistent interactions. Stack: <em>React</em><em>TypeScript</em><em>Nagrand</em></p>
+              <p><strong>- Goal: </strong>Extract reusable business and UI components, publish to the component library, and drive cross-domain adoption</p>
+              <div>
+                <strong>- Work: </strong>
+                <div class="problems">
+                  <p class="sub-des">Participated in requirements discussion and implementation of Document Preview, DatePicker (24h support), AmountInput, and unique-element components</p>
+                  <p class="sub-des">Developed Cards, SectionContainer, Alert, Pagination, Anchor, and other standard UI components, publishing them to the Nagrand library</p>
+                  <p class="sub-des">Built a rich-text editor component; contributed to compatibility design, test case coverage, and documentation</p>
+                </div>
+              </div>
+              <p><strong>- Result: </strong>Components reused across multiple domains, reducing duplicated development; standardized UI components improved cross-domain interaction consistency</p>
+            </div>
+          </div>
+        </li>
+
+        <!-- Project 3 -->
+        <li>
+          <div class="content">
+            <h4>
+              <span data-lang="zh">3、AI Code Review 项目</span>
+              <span data-lang="en">3. AI Code Review Platform</span>
+              <span data-lang="zh">所属公司：众安</span>
+              <span data-lang="en">Company: ZhongAn</span>
+            </h4>
+            <div class="description" data-lang="zh">
+              <p><strong>- 背景：</strong>团队 Code Review 效率有限，希望引入 AI 能力辅助代码审查，提升研发质量与效率。主要技术栈为 <em>React</em><em>Node.js</em></p>
+              <p><strong>- 目标：</strong>参与 AI Code Review 项目开发，完成基础设施搭建及核心功能实现</p>
+              <div>
+                <strong>- 工作：</strong>
+                <div class="problems">
+                  <p class="sub-des">负责仓库迁移、Client 迁移等核心工程工作</p>
+                  <p class="sub-des">实现 test mr history 展示、增加 problemType 字段、搭建新的 service 服务等需求</p>
+                  <p class="sub-des">作为团队 Claude AI 布道者，组织跨组讨论，收集反馈，提出优化建议，开发 Node 版本 Jira MCP 等辅助工具</p>
+                </div>
+              </div>
+              <p><strong>- 成果：</strong>推动 AI Code Review 项目落地；AI 辅助工具在团队推广使用，提升整体研发效能</p>
+            </div>
+            <div class="description" data-lang="en">
+              <p><strong>- Background: </strong>Team code review throughput was limited; the goal was to introduce AI to assist review and improve engineering quality. Stack: <em>React</em><em>Node.js</em></p>
+              <p><strong>- Goal: </strong>Contribute to the AI Code Review platform — from infrastructure setup to core feature delivery</p>
+              <div>
+                <strong>- Work: </strong>
+                <div class="problems">
+                  <p class="sub-des">Handled core engineering tasks: repository migration and client migration</p>
+                  <p class="sub-des">Implemented MR history display, added the problemType field, and set up new service infrastructure</p>
+                  <p class="sub-des">Served as the team's Claude AI advocate — facilitated cross-group discussions, gathered feedback, proposed improvements, and built auxiliary tooling including a Node.js Jira MCP server</p>
+                </div>
+              </div>
+              <p><strong>- Result: </strong>Successfully launched the AI Code Review platform; AI-assisted tooling adopted team-wide, boosting overall R&D efficiency</p>
+            </div>
+          </div>
+        </li>
+
+        <!-- Project 4 -->
+        <li>
+          <div class="content">
+            <h4>
+              <span data-lang="zh">4、<em>Taro</em>转多端小程序和h5</span>
+              <span data-lang="en">4. Cross-Platform Mini Program &amp; H5 with <em>Taro</em></span>
+              <span data-lang="zh">所属公司：携程</span>
+              <span data-lang="en">Company: Trip.com (Ctrip)</span>
+            </h4>
+            <div class="description" data-lang="zh">
+              <p><strong>- 背景：</strong>h5和小程序渠道功能、交互、页面高度相似，在两个项目中各自维护，需求需重复开发，占用资源。主要技术栈为<em>Taro</em><em>React</em></p>
               <p><strong>- 目标：</strong>使用<em>Taro</em>框架实现一套代码，多端复用</p>
               <div>
                 <strong>- 工作：</strong>
@@ -152,13 +347,32 @@
               </div>
               <p><strong>- 成果：</strong>完成微信、百度、支付宝、头条等原生小程序和h5的转换，CR显著提升5%</p>
             </div>
+            <div class="description" data-lang="en">
+              <p><strong>- Background: </strong>H5 and Mini Program channels shared nearly identical features and UI but were maintained as separate projects, requiring duplicate development effort. Stack: <em>Taro</em><em>React</em></p>
+              <p><strong>- Goal: </strong>Unify both channels into a single codebase using the <em>Taro</em> framework</p>
+              <div>
+                <strong>- Work: </strong>
+                <div class="problems">
+                  <p class="sub-des">Replaced the homepage-to-list-page code framework; improved UX via pre-fetching and <em>LazyCreate</em> below-the-fold components</p>
+                  <p class="sub-des">Researched and documented API/CSS compatibility solutions for differences across platforms and device models</p>
+                </div>
+              </div>
+              <p><strong>- Result: </strong>Delivered cross-platform output for WeChat, Baidu, Alipay, and ByteDance mini programs plus H5; conversion rate improved by 5%</p>
+            </div>
           </div>
         </li>
+
+        <!-- Project 5 -->
         <li>
           <div class="content">
-            <h4>4、微前端组件 <span>所属公司：携程</span></h4>
-            <div class="description">
-              <p><strong>- 背景：</strong>机票以不同形式开展多场拉新活动，流程均为用户在微信环境分享给好友助力，而多场拉新活动各自重复开发造成资源浪费.
+            <h4>
+              <span data-lang="zh">5、微前端组件</span>
+              <span data-lang="en">5. Micro-Frontend Widget System</span>
+              <span data-lang="zh">所属公司：携程</span>
+              <span data-lang="en">Company: Trip.com (Ctrip)</span>
+            </h4>
+            <div class="description" data-lang="zh">
+              <p><strong>- 背景：</strong>机票以不同形式开展多场拉新活动，流程均为用户在微信环境分享给好友助力，而多场拉新活动各自重复开发造成资源浪费。</p>
               <p><strong>- 目标：</strong>封装拉新组件，便于不同团队不同技术栈开发的各页面接入 </p>
               <div>
                 <strong>- 工作：</strong>
@@ -170,19 +384,40 @@
               </div>
               <p><strong>- 成果：</strong>基于<em>微件化</em>完成不同活动页面接入助力组件，为每场活动接入节省了6pd</p>
             </div>
+            <div class="description" data-lang="en">
+              <p><strong>- Background: </strong>Flights ran multiple user-acquisition campaigns (WeChat social sharing flows), each rebuilt from scratch, causing significant duplicated effort.</p>
+              <p><strong>- Goal: </strong>Encapsulate a shareable acquisition widget compatible with pages built by different teams on different tech stacks</p>
+              <div>
+                <strong>- Work: </strong>
+                <div class="problems">
+                  <p class="sub-des">Built project scaffold using <em>Vue</em><em>Node.js</em><em>SSR</em>; enabled widget integration regardless of host page's tech stack</p>
+                  <p class="sub-des">Implemented JS isolation via <em>proxy window</em> and CSS isolation via <em>CSS Modules</em></p>
+                  <p class="sub-des">Refactored project structure to <em>mono-repo</em>, improving scalability and boundary management</p>
+                </div>
+              </div>
+              <p><strong>- Result: </strong>Widget-based architecture enabled seamless integration across multiple campaign pages; saved 6 person-days per campaign integration</p>
+            </div>
+          </div>
         </li>
       </ul>
     </div>
   </section>
+
+  <!-- ===== OTHER ===== -->
   <section class="other">
-    <div class="header">其他</div>
+    <div class="header" data-lang="zh">其他</div>
+    <div class="header" data-lang="en">Additional</div>
     <div class="body">
       <ul>
         <li>
           <div class="content">
-            <div class="description">
+            <div class="description" data-lang="zh">
               <p>- <em>英语</em>专业八级证书、大学英语6级（613）</p>
               <p>- 兴趣爱好：滑雪、羽毛球、画画</p>
+            </div>
+            <div class="description" data-lang="en">
+              <p>- <em>English</em> TEM-8 (Test for English Majors Band 8) &amp; CET-6 (613)</p>
+              <p>- Hobbies: Skiing, Badminton, Drawing</p>
             </div>
           </div>
         </li>

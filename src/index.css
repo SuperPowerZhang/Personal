@@ -30,6 +30,12 @@ header {
   justify-content: space-between;
   border-bottom: 2px solid rgb(69, 109, 109);
 }
+header ul{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
 header li {
   display: inline-block;
@@ -137,9 +143,6 @@ section .header {
   border-bottom: solid 1px rgb(69, 109, 109);
 }
 
-section .body ul li {
-  /* margin-top:6px; */
-}
 
 .program .body .content h4 {
   display: flex;
@@ -203,10 +206,6 @@ section .body ul li .content {
   height: 110px;
 }
 
-.workskill .body .content {
-  margin-left: 10px;
-}
-
 .other .body .content {
   margin-left: 10px;
 }
@@ -238,12 +237,6 @@ section .body ul li .content {
 
 .body .content .description .sub-des {
   width: 100%;
-  /* display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  position: relative; */
-  /* padding-left: 12px; */
 }
 
 .body .content .description .sub-des i {
@@ -281,18 +274,11 @@ section .body ul li .content {
   }
 }
 
-/* .body .content .description  .sub-des i:first-child::after{
-    
-} */
 .body .content .description .sub-des::before {
   content: '✻';
   position: absolute;
   top: 0;
   left: -4px;
-}
-
-.work {
-  /* page-break-before:always; */
 }
 
 .icon {
