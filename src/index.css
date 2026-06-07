@@ -115,7 +115,7 @@ header li a {
   justify-content: space-between;
 }
 
-.info .basic span {
+.info .basic span:not([data-lang]) {
   display: inline-block;
   padding-right: 20px;
 }
@@ -150,7 +150,7 @@ section .header {
   justify-content: space-between;
 }
 
-.program .body .content h4 span {
+.program .body .content h4 span:not([data-lang]) {
   display: inline-block;
   margin-right: 20px;
   font-weight: 400;
