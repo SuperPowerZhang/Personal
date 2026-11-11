@@ -274,13 +274,6 @@ section .body ul li .content {
   }
 }
 
-.body .content .description .sub-des::before {
-  content: '✻';
-  position: absolute;
-  top: 0;
-  left: -4px;
-}
-
 .icon {
   width: 1em;
   height: 1em;
@@ -309,4 +302,23 @@ section .body ul li .content {
 
 .other {
   padding-bottom: 40px;
+}
+
+@font-face {
+  font-family: 'Resume Print';
+  src: url('./resume-print.woff2') format('woff2');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: block;
+}
+
+@media print {
+  body {
+    font-family: 'Resume Print', sans-serif;
+    max-height: none;
+  }
+
+  .lang-switch {
+    display: none !important;
+  }
 }
